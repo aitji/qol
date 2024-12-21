@@ -1,0 +1,234 @@
+{
+    "namespace": "trade2_pocket",
+    "trade_and_help_buttons/how_to_play_button_holder": {
+        "modifications": [
+            {
+                "control_name": "how_to_play_button",
+                "operation": "remove"
+            },
+            {
+                "array_name": "controls",
+                "operation": "insert_back",
+                "value": [
+                    {
+                        "quick_trade_button@aitji_quick_crafting.quick_trade_button": {
+                            "size": [32,32],
+                            "anchor_from": "right_middle",
+                            "anchor_to": "right_middle"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "toggle_content": {
+        "type": "stack_panel",
+        "size": ["100%","100%cm"],
+        "orientation": "horizontal",
+        "controls": [
+            {
+                "padding_1": {
+                    "type": "panel",
+                    "size": ["fill",0]
+                }
+            },
+            {"trade_item_1@trade2.trade_item_1": {"layer": 2}},
+            {
+                "padding_2": {
+                    "type": "panel",
+                    "size": [2,0]
+                }
+            },
+            {
+                "padding_2_extra": {
+                    "type": "panel",
+                    "size": [10,0],
+                    "bindings": [
+                        {"binding_type": "collection_details"},
+                        {
+                            "binding_name": "(not #padding_around_sell_item)",
+                            "binding_name_override": "#visible"
+                        }
+                    ]
+                }
+            },
+            {"trade_item_2@trade2.trade_item_2": {"layer": 2}},
+            {
+                "padding_3": {
+                    "type": "panel",
+                    "size": [2,0]
+                }
+            },
+            {
+                "padding_3_extra": {
+                    "type": "panel",
+                    "size": [6,0],
+                    "bindings": [
+                        {"binding_type": "collection_details"},
+                        {
+                            "binding_name": "(not #padding_around_sell_item)",
+                            "binding_name_override": "#visible"
+                        }
+                    ]
+                }
+            },
+            {"arrow_holder@trade2.arrow_holder": {"inherit_max_sibling_height": true}},
+            {
+                "padding_4": {
+                    "type": "panel",
+                    "size": [2,0]
+                }
+            },
+            {
+                "sell_item_holder": {
+                    "type": "panel",
+                    "size": ["200%c","100%c"],
+                    "layer": 2,
+                    "controls": [
+                        {
+                            "sell_item@trade2.sell_item": {}
+                        }
+                    ],
+                    "bindings": [
+                        {
+                            "binding_type": "collection_details"
+                        },
+                        {
+                            "binding_name": "#padding_around_sell_item",
+                            "binding_name_override": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "sell_item_holder_with_less_padding": {
+                    "type": "panel",
+                    "size": ["150%c","100%c"],
+                    "layer": 2,
+                    "controls": [{"sell_item@trade2.sell_item": {}}],
+                    "bindings": [
+                        {"binding_type": "collection_details"},
+                        {
+                            "binding_name": "(not #padding_around_sell_item)",
+                            "binding_name_override": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "padding_5": {
+                    "type": "panel",
+                    "size": ["fill",0]
+                }
+            }
+        ]
+    },
+    "quick_trade_button_icon": {
+    "type": "image",
+    "texture": "textures/items/emerald",
+    "size": [16,16],
+    "controls": [
+      {
+        "hover_text@container_item_ds-acr.custom_hover_text": {
+          "$hover_text": "containerA.quickTradeButton",
+          "$hover_text_anchor_from": "bottom_middle",
+          "$hover_text_anchor_to": "top_middle",
+          "$hover_text_offset": [0,5]
+        }
+      }
+    ]
+  },
+  
+  "quick_trade_button@common_buttons.light_content_button": {
+    "$button_content": "trade2.quick_trade_button_icon",
+    "size": [18,18],
+    "property_bag": {
+      "#collection_name": "trade2_result_item"
+    },
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "double_pressed"
+      }
+    ]
+  },
+  
+  
+  "tier_stack_panel": {
+    "bindings": []
+  },
+  
+  "top_half_stack_panel/how_to_play_button_holder": {
+    "controls": [
+      {
+        "quick_trade_button@trade2.quick_trade_button": {
+          "anchor_from": "right_middle",
+          "anchor_to": "right_middle",
+          "bindings": [
+            {
+              "binding_name": "#trade_button_enabled",
+              "binding_name_override": "#enabled"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "screen_panel": {
+    "$use_container_item_mode": true,
+    "$use_item_highlighter": true,
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "container_item_mode_details_panel@container_item_ds-acr.container_item_mode_details_panel": {
+            "layer": 50
+          }
+        }
+      }
+    ]
+  },
+  
+  "left_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "tooltip_button@container_item_ds-acr.tooltip_button_panel": {
+            "anchor_from": "top_left",
+            "anchor_to": "top_right"
+          }
+        }
+      }
+    ]
+  },
+  
+  "right_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "container_item_data@container_item_data_ds-acr.total_data": {}
+          },
+          {
+            "container_control_panel@container_item_ds-acr.container_control_panel": {
+              "anchor_from": "top_right",
+              "anchor_to": "top_left"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

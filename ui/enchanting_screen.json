@@ -1,0 +1,63 @@
+{
+  "background_with_hover_text/hover_text": {
+    "ignored": true
+  },
+  
+  "enchant_runes": {
+    "font_type": "default",
+    "bindings": [
+      {
+        "binding_name": "(#hover_text - ',')",
+        "binding_name_override": "#runes",
+        "binding_collection_name": "#enchant_buttons",
+        "binding_type": "collection"
+      }
+    ]
+  },
+  
+  "enchanting_panel": {
+    "$use_container_item_mode": true,
+    "$use_item_highlighter": true,
+    "$show_close_button": false,
+    "$use_custom_close_button": true,
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "container_item_mode_details_panel@container_item_ds-acr.container_item_mode_details_panel": {
+              "layer": 50
+            }
+          }
+        ]
+      }
+    ]
+  },
+  
+  "enchanting_panel/root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "tooltip_button@container_item_ds-acr.tooltip_button_panel": {
+              "anchor_from": "top_left",
+              "anchor_to": "top_right"
+            }
+          },
+          {
+            "container_item_data@container_item_data_ds-acr.total_data": {}
+          },
+          {
+            "container_control_panel@container_item_ds-acr.container_control_panel": {
+              "anchor_from": "top_right",
+              "anchor_to": "top_left"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

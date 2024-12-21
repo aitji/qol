@@ -1,0 +1,35 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {	
+		"animation.player.sneaking" : {
+			"loop" : true,
+			"bones" : {
+				"body" : {
+					"position" : [ 0.0, "(query.is_swimming || query.is_crawling || query.is_gliding) ? 0.0 : ((query.get_default_bone_pivot('body',1) - query.get_default_bone_pivot('rightleg',1)) * -0.12241 - 1.73108)", 0.0 ],
+					"rotation" : [ "(query.is_swimming || query.is_crawling) ? 0.0 : 28.64788", 0.0, 0.0 ]
+				},
+				"head" : {
+					"position" : [ 0.0, "(query.is_swimming || query.is_crawling) ? 0.0 : -0.87758", "(query.is_swimming || query.is_crawling) ? 0.0 : -0.47942" ],
+					"rotation" : [ "(query.is_gliding) ? -28.64788 : 0.0", 0.0, 0.0 ]
+				},
+				"leftarm" : {
+					"position" : [ 0.0, "(query.is_swimming || query.is_crawling) ? 0.0 : 0.24483", "(query.is_swimming || query.is_crawling) ? 0.0 : -0.95885" ],
+					"rotation" : [ "(query.is_swimming || query.is_crawling) ? 0.0 : -5.72957", 0.0, 0.0 ]
+				},
+				"leftleg" : {
+					"position" : [ 0.0, "(query.is_swimming || query.is_crawling) ? 0.0 : -0.2", "(query.is_swimming || query.is_crawling) ? 0.0 : ((query.get_default_bone_pivot('body',1) - query.get_default_bone_pivot('leftleg',1)) * 0.47942 - 1.75304)" ]
+				},
+				"rightarm" : {
+					"position" : [ 0.0, "(query.is_swimming || query.is_crawling) ? 0.0 : 0.24483", "(query.is_swimming || query.is_crawling) ? 0.0 : -0.95885" ],
+					"rotation" : [ "(query.is_swimming || query.is_crawling) ? 0.0 : -5.72957", 0.0, 0.0 ]
+				},
+				"rightleg" : {
+					"position" : [ 0.0, "(query.is_swimming || query.is_crawling) ? 0.0 : -0.2", "(query.is_swimming || query.is_crawling) ? 0.0 : ((query.get_default_bone_pivot('body',1) - query.get_default_bone_pivot('rightleg',1)) * 0.47942 - 1.75304)" ]
+				},
+				"root" : {
+					"position" : [ 0.0, "(query.is_swimming || query.is_crawling) ? 0.0 : (query.get_default_bone_pivot('body',1) / -12.0)", 0.0 ]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+{
+  "namespace": "start",
+
+  "resource_pack_information": {
+    "type": "panel",
+    "anchor_from": "top_center",
+    "anchor_to": "top_center",
+    "controls": [
+      {
+        "label": {
+          "type": "label",
+          "color": "$main_header_text_color",
+          "layer": 2,
+          "text": "§7funny sub-pack are enabled",
+          "size": [ "default", 10 ],
+          "max_size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "label_background": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "alpha": 0.6,
+          "size": [ "100%sm + 4px", "100%sm + 2px" ],
+          "layer": 1
+        }
+      }
+    ]
+  },
+
+  "text_panel": {
+    "type": "panel",
+    "size": [ "100%-2px", 10 ],
+    "offset": [ 0, -1 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "controls": [
+      {"copyright@start.copyright": {}},
+      {"development_version@start.development_version": {"ignored": "$is_publish"}},
+      {"version@start.version": {}},
+      {"resource_pack_information@start.resource_pack_information": {}}
+    ]
+  }
+}

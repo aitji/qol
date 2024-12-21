@@ -1,0 +1,15 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "acr.destroy_item": {
+      "category": "ui",
+      "sounds": [
+        {
+          "name": "sounds/destroy_item",
+          "volume": 1,
+          "load_on_low_memory": true
+        }
+      ]
+    }
+  }
+}

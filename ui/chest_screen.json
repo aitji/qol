@@ -1,0 +1,118 @@
+{
+  "chest_label": {
+    "max_size": ["40%",11]
+  },
+  
+  "small_chest_panel": {
+    "$use_container_item_mode": true,
+    "$use_item_highlighter": true,
+    "$use_search_bar": true,
+    "$is_chest_screen": true,
+    "$show_close_button": false,
+    "$use_custom_close_button": true,
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "container_item_mode_details_panel@container_item_ds-acr.container_item_mode_details_panel": {
+              "layer": 50
+            }
+          }
+        ]
+      }
+    ]
+  },
+  
+  "large_chest_panel": {
+    "$use_container_item_mode": true,
+    "$use_item_highlighter": true,
+    "$use_search_bar": true,
+    "$is_chest_screen": true,
+    "$is_large_chest": true,
+    "$show_close_button": false,
+    "$use_custom_close_button": true,
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "container_item_mode_details_panel@container_item_ds-acr.container_item_mode_details_panel": {
+              "layer": 50
+            }
+          }
+        ]
+      }
+    ]
+  },
+  
+  "small_chest_panel/root_panel/chest_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "tooltip_button@container_item_ds-acr.tooltip_button_panel": {
+              "anchor_from": "top_left",
+              "anchor_to": "top_right"
+            }
+          },
+          {
+            "container_item_data@container_item_data_ds-acr.total_data": {}
+          },
+          {
+            "container_control_panel@container_item_ds-acr.container_control_panel": {
+              "anchor_from": "top_right",
+              "anchor_to": "top_left"
+            }
+          },
+          {
+            "search_bar@container_item_ds-acr.item_highlighter_search_bar": {
+              "size": ["45%",14],
+              "anchor_from": "top_right",
+              "anchor_to": "top_right",
+              "offset": [-7,5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  
+  "large_chest_panel/root_panel/chest_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "tooltip_button@container_item_ds-acr.tooltip_button_panel": {
+              "anchor_from": "top_left",
+              "anchor_to": "top_right"
+            }
+          },
+          {
+            "container_item_data@container_item_data_ds-acr.total_data": {}
+          },
+          {
+            "container_control_panel@container_item_ds-acr.container_control_panel": {
+              "anchor_from": "top_right",
+              "anchor_to": "top_left"
+            }
+          },
+          {
+            "search_bar@container_item_ds-acr.item_highlighter_search_bar": {
+              "size": ["45%",14],
+              "anchor_from": "top_right",
+              "anchor_to": "top_right",
+              "offset": [-7,5]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

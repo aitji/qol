@@ -1,0 +1,141 @@
+{
+	"namespace": "stonecutter_pocket",
+	"stonecutter_content_stack_panel/panel": {
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": [
+                    {
+                        "stonecutter_input_slot": {
+                            "size": [0,0],
+                            "type": "panel",
+                            "bindings": [
+                                {
+                                    "binding_name": "#item_id_aux",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "stonecutter_input_items"
+                                },
+                                {
+                                    "binding_name": "#inventory_stack_count",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "stonecutter_input_items"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "stonecutter_output_slot": {
+                            "size": [0,0],
+                            "type": "panel",
+                            "bindings": [
+                                {
+                                    "binding_name": "#item_id_aux",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "stonecutter_result_items"
+                                },
+                                {
+                                    "binding_name": "#inventory_stack_count",
+                                    "binding_type": "collection",
+                                    "binding_collection_name": "stonecutter_result_items"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "total_item_can_be_crafting": {
+                            "type": "label",
+                            "text": "#text",
+                            "color": "$title_text_color",
+                            "offset": [0,54],
+                            "layer": 100,
+                            "bindings": [
+                                {
+                                    "binding_type": "view",
+                                    "source_control_name": "stonecutter_input_slot",
+                                    "source_property_name": "( (not (#inventory_stack_count * 1 > 1) * (not (#item_id_aux = -1) + 0)) + #inventory_stack_count * 1 )",
+                                    "target_property_name": "#input"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_control_name": "stonecutter_output_slot",
+                                    "source_property_name": "( (not (#inventory_stack_count * 1 > 1) * (not (#item_id_aux = -1) + 0)) + #inventory_stack_count * 1 )",
+                                    "target_property_name": "#output"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "(not (#input * #output) = 0)",
+                                    "target_property_name": "#visible"
+                                },
+                                {
+                                    "binding_type": "view",
+                                    "source_property_name": "('x' + #input * #output)",
+                                    "target_property_name": "#text"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+	"vertical_arrow_icon": {
+		"controls": [
+			{
+				"stonecutter_quick_craft_button@aitji_quick_crafting.stonecutter_quick_craft_button": {
+					"size": [32,32],
+					"offset": [8.5,4.75]
+				}
+			}
+		]
+	},
+    "crafting_arrow_icon": {
+    "type": "image",
+    "texture": "textures/ui/arrow_down_large",
+    "size": [15,22],
+    "controls": [
+      {
+        "hover_text@container_item_ds-acr.custom_hover_text": {
+          "$hover_text": "containerA.quickCraftButton",
+          "$hover_text_anchor_from": "bottom_middle",
+          "$hover_text_anchor_to": "top_right",
+          "$hover_text_offset": [0,5]
+        }
+      }
+    ]
+  },
+  
+  "quick_craft_button@common_buttons.light_content_button": {
+    "$default_state_border_visible": false,
+    "$hover_state_border_visible": false,
+    "$pressed_state_border_visible": false,
+    "$locked_state_border_visible": false,
+    "$button_content": "stonecutter_pocket.crafting_arrow_icon",
+    "size": [19,26],
+    "layer": 3,
+    "property_bag": {
+      "#collection_name": "stonecutter_result_items"
+    },
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "double_pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "double_pressed"
+      }
+    ]
+  },
+  
+  "stonecutter_content_stack_panel/panel/stack_panel/arrow_holder/vertical_arrow_icon": {
+    "alpha": 0,
+    "controls": [
+      {
+        "quick_craft_button@stonecutter_pocket.quick_craft_button": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+> Setting Hitbox Texture >
+
+   1. White color (#ffffff)
+   2. Red color (#ff0000)
+   3. Blue color (#0000ff)
+   4. Opacity of the brush 210

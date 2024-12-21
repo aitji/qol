@@ -1,0 +1,32 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.evoker": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [            
+          "Texture.base1",
+          "Texture.base2",
+          "Texture.base3",
+          "Texture.base4",
+          "Texture.base5",
+          "Texture.base6",
+          "Texture.base7",
+          "Texture.base8",
+          "Texture.base9",
+          "Texture.base10"
+        ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "part_visibility": [
+        { "*": true },
+        { "arms": false },
+        { "leftarm": true },
+        { "rightarm": true }
+      ],
+      "textures": [ "Array.skins[variable.skin_id]" ]
+    }
+  }
+}

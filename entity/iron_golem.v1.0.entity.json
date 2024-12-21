@@ -1,0 +1,39 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:iron_golem",
+      "materials": { "default": "drowned" },
+      "textures": {
+        "default": "assets/minecraft/textures/entity/iron_golem/iron_golem",
+        "default2": "assets/minecraft/optifine/random/entity/iron_golem2",
+        "default3": "assets/minecraft/optifine/random/entity/iron_golem3",
+        "default4": "assets/minecraft/optifine/random/entity/iron_golem4",
+        "default5": "assets/minecraft/optifine/random/entity/iron_golem5"
+      },
+      "geometry": {
+        "default": "geometry.irongolem"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 28.65;",
+          "variable.Xvar = (variable.Xvar ?? Math.random(0,999));"
+        ]
+      },
+      "animations": {
+        "walk": "animation.iron_golem.walk",
+        "move": "animation.iron_golem.move",
+        "walk_to_target": "animation.iron_golem.walk_to_target",
+        "move_to_target": "animation.iron_golem.move_to_target",
+        "attack": "animation.iron_golem.attack",
+        "flower": "animation.iron_golem.flower",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.iron_golem.move" },
+        { "arm": "controller.animation.iron_golem.arm_movement"}
+      ],
+      "render_controllers": [ "controller.render.iron_golem" ]
+    }
+  }
+}

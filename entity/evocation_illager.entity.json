@@ -1,0 +1,60 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:evocation_illager",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "evoker"
+      },
+      "textures": {
+        "base1": "assets/minecraft/textures/entity/illager/evoker",
+        "base2": "assets/minecraft/optifine/random/entity/illager/evoker2",
+        "base3": "assets/minecraft/optifine/random/entity/illager/evoker3",
+        "base4": "assets/minecraft/optifine/random/entity/illager/evoker4",
+        "base5": "assets/minecraft/optifine/random/entity/illager/evoker5",
+        "base6": "assets/minecraft/optifine/random/entity/illager/evoker6",
+        "base7": "assets/minecraft/optifine/random/entity/illager/evoker7",
+        "base8": "assets/minecraft/optifine/random/entity/illager/evoker8",
+        "base9": "assets/minecraft/optifine/random/entity/illager/evoker9",
+        "base10": "assets/minecraft/optifine/random/entity/illager/evoker10"
+      },
+      "geometry": {
+        "default": "geometry.evoker.v1.8"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.skin_id = (variable.skin_id ?? Math.random(0,10));",
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ],
+        "scale": "0.9375",
+        "animate": [
+          "controller_general",
+          "controller_move"
+        ]
+      },
+      "animations": {
+        "general": "animation.evoker.general",
+        "casting": "animation.evoker.casting",
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.evoker.move",
+        "celebrating": "animation.humanoid.celebrating",
+        "controller_general": "controller.animation.evoker.general",
+        "controller_move": "controller.animation.villager.move",
+        "riding.arms": "animation.vindicator.riding.arms",
+        "riding.legs": "animation.vindicator.riding.legs",
+        "controller_riding": "controller.animation.humanoid.riding"
+      },
+      "particle_effects": {
+        "spell": "minecraft:evoker_spell"
+      },
+      "render_controllers": [
+        "controller.render.evoker"
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 40
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:wandering_trader",
+      "materials": {
+        "default": "drowned"
+      },
+      "textures": {
+        "default": "assets/minecraft/optifine/random/entity/wandering_trader71",
+        "default2": "assets/minecraft/optifine/random/entity/wandering_trader72"
+      },
+      "geometry": {
+        "default": "geometry.wtrader"
+      },
+      "scripts": {
+        "scale": "0.9375",
+        "pre_animation": [
+          "variable.Xvar = (variable.Xvar ?? Math.random(0,999));"
+        ]
+      },
+      "animations": {
+        "general": "animation.villager.general",
+        "look_at_target": "animation.common.look_at_target",
+        "use_item_progress": "animation.nugget.use_item_progress",
+        "move": "animation.villager.move",
+        "riding": "animation.villager.riding"
+      },
+      "animation_controllers": [
+        { "general": "controller.animation.villager.general" },
+        { "use_item_progress": "controller.animation.nugget.use_item_progress" },
+        { "move": "controller.animation.villager.move" },
+        { "riding": "controller.animation.nugget.riding" }
+      ],
+      "render_controllers": [ "controller.render.wandering_trader" ],
+      "spawn_egg": {
+        "texture": "spawn_egg_wandering_trader"
+      }
+    }
+  }
+}

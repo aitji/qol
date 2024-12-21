@@ -1,0 +1,44 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.witch.general" : {
+			"loop" : true,
+			"bones" : {
+				"nose" : {
+					"rotation" : [ "(variable.isholdingitem ? -25.7831 : (math.sin(query.life_time * 57.296) * 4.5)) - this", 0.0, "(math.cos(query.life_time * 57.296) * 2.5) - this" ]
+				},
+				"leftarm" : {
+					"rotation" : [ "(math.cos(query.life_time * 70.0) * 2.1)", 0.0, "(math.cos(query.life_time * 50.0) * 2.1) - 2.1" ]
+				},
+				"rightarm" : {
+					"rotation" : [ "variable.isholdingitem ? -75 : (math.cos(query.life_time * 70.0) * -2.1)", "variable.isholdingitem ? -29 :  0.0" , "variable.isholdingitem ? -9 : ((math.cos(query.life_time * 50.0) * -2.1) + 2.1)" ]
+				},
+				"held_item" : {
+					"position" : [ 0.0, "variable.isholdingitem ? 28.0 : 0.0", 0.0 ]
+				}
+			}
+		},
+		"animation.witch.riding" : {
+			"loop" : true,
+			"bones" : {
+				"leftarm" : {
+					"rotation" : [ -36.0, 0.0, 0.0 ],
+					"position" : [ 0.0, -7.0, 0.0 ]
+				},
+				"rightarm" : {
+					"rotation" : [ -36.0, 0.0, 0.0 ],
+					"position" : [ 0.0, -7.0, 0.0 ]
+				},
+				"leftleg" : {
+					"rotation" : [ "-72.0 - this", "-18.0 - this", "-this" ]
+				},
+				"rightleg" : {
+					"rotation" : [ "-72.0 - this", "18.0 - this", "-this" ]
+				},
+				"playerp" : {
+					"position" : [ 0.0, -7.0, 0.0 ]
+				}
+			}
+		}
+    }
+}

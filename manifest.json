@@ -46,6 +46,11 @@
             "memory_tier": 1
         },
         {
+            "folder_name": "small",
+            "name": "\n\n§9Small Armor!§r - Tiny Armor For The Cutest Minecraft Character!",
+            "memory_tier": 1
+        },
+        {
             "folder_name": "nether",
             "name": "\n\n§cNether Navigator 3000§r - Always Know Where You Are, Even When Lost in Lava!",
             "memory_tier": 1

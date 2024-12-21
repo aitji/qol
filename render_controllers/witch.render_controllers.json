@@ -1,0 +1,31 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.witch": {
+      "arrays": {
+        "textures": {
+          "Array.default": [
+            "Texture.default",
+            "Texture.default2"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.default[variable.Xvar]" ]
+    },
+    "controller.render.witch.v1.0": {
+      "arrays": {
+        "textures": {
+          "Array.default": [
+            "Texture.default",
+            "Texture.default2"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.default[variable.Xvar]" ]
+    }
+  }
+}

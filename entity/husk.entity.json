@@ -1,0 +1,65 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:husk",
+      "min_engine_version": "1.8.0",
+      "materials": { "default": "drowned" },
+      "textures": { "default": "assets/minecraft/textures/entity/zombie/husk", "default2": "assets/minecraft/optifine/random/entity/zombie/husk2" },
+      "geometry": { "default": "geometry.zombie.husk.v1.8" },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+          "variable.Xvar = (variable.Xvar ?? Math.random(0,999));"
+        ]
+      },
+      "animations": {
+        "nugget_big_head": "animation.nugget.big_head",
+        "nugget_adult_head": "animation.nugget.adult_head",
+        "nugget_no_tits": "animation.nugget.no_tits",
+        "look_at_target_default": "animation.humanoid.look_at_target.default",
+        "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+        "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+        "move": "animation.nugget.move",
+        "riding.arms": "animation.nugget.riding.arms",
+        "riding.legs": "animation.nugget.riding.legs",
+        "holding": "animation.nugget.holding",
+        "brandish_spear": "animation.nugget.brandish_spear",
+        "charging": "animation.nugget.charging",
+        "attack.rotations": "animation.nugget.attack.rotations",
+        "sneaking": "animation.nugget.sneaking",
+        "bob": "animation.nugget.bob",
+        "damage_nearby_mobs": "animation.nugget.damage_nearby_mobs",
+        "bow_and_arrow": "animation.nugget.bow_and_arrow",
+        "use_item_progress": "animation.nugget.use_item_progress",
+        "zombie_attack_bare_hand": "animation.zombie.attack_bare_hand",
+        "swimming": "animation.zombie.swimming"
+      },
+      "animation_controllers": [
+        { "nugget_big_head": "controller.animation.nugget.big_head" },
+        { "nugget_adult_head": "controller.animation.nugget.adult_head" },
+        { "nugget_no_tits": "controller.animation.nugget.no_tits" },
+        { "look_at_target": "controller.animation.humanoid.look_at_target" },
+        { "move": "controller.animation.nugget.move" },
+        { "riding": "controller.animation.nugget.riding" },
+        { "holding": "controller.animation.nugget.holding" },
+        { "brandish_spear": "controller.animation.nugget.brandish_spear" },
+        { "charging": "controller.animation.nugget.charging" },
+        { "attack": "controller.animation.nugget.attack" },
+        { "sneaking": "controller.animation.nugget.sneaking" },
+        { "bob": "controller.animation.nugget.bob" },
+        { "damage_nearby_mobs": "controller.animation.nugget.damage_nearby_mobs" },
+        { "bow_and_arrow": "controller.animation.nugget.bow_and_arrow" },
+        { "use_item_progress": "controller.animation.nugget.use_item_progress" },
+        { "zombie_attack_bare_hand": "controller.animation.zombie.attack_bare_hand" },
+        { "swimming": "controller.animation.zombie.swimming" }
+      ],
+      "render_controllers": [ "controller.render.husk" ],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 28
+      }
+    }
+  }
+}

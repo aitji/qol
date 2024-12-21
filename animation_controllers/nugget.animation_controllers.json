@@ -1,0 +1,323 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.nugget.attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"attacking" : {
+					"animations" : [ "attack.rotations" ],
+					"transitions" : [
+						{
+							"default" : "variable.attack_time < 0.0"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"attacking" : "variable.attack_time >= 0.0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.nugget.big_head" : {
+			"initial_state" : "default",
+			"states" : {
+				"baby" : {
+					"animations" : [ "nugget_big_head" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_baby"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"baby" : "query.is_baby"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.nugget.adult_head" : {
+			"initial_state" : "default",
+			"states" : {
+				"baby" : {
+					"animations" : [ "nugget_adult_head" ],
+					"transitions" : [
+						{
+							"default" : "query.is_baby"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"baby" : "!query.is_baby"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.nugget.no_tits" : {
+			"initial_state" : "default",
+			"states" : {
+				"baby" : {
+					"animations" : [ "nugget_no_tits" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_baby"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"baby" : "query.is_baby"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.nugget.base_pose" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "nugget_base_pose" ]
+				}
+			}
+		},
+		"controller.animation.nugget.bob" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "bob" ]
+				}
+			}
+		},
+		"controller.animation.nugget.bow_and_arrow" : {
+			"initial_state" : "default",
+			"states" : {
+				"bow_and_arrow" : {
+					"animations" : [ "bow_and_arrow" ],
+					"transitions" : [
+						{
+							"default" : "!query.has_target"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"bow_and_arrow" : "query.has_target"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.nugget.brandish_spear" : {
+			"initial_state" : "default",
+			"states" : {
+				"brandish_spear" : {
+					"animations" : [ "brandish_spear" ],
+					"transitions" : [
+						{
+							"default" : "!variable.is_brandishing_spear"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"brandish_spear" : "variable.is_brandishing_spear"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.nugget.charging" : {
+			"initial_state" : "default",
+			"states" : {
+				"charging" : {
+					"animations" : [ "charging" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_charging"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"charging" : "query.is_charging"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.nugget.damage_nearby_mobs" : {
+			"initial_state" : "default",
+			"states" : {
+				"damage_nearby_mobs" : {
+					"animations" : [ "damage_nearby_mobs" ],
+					"transitions" : [
+						{
+							"default" : "!variable.damage_nearby_mobs"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"damage_nearby_mobs" : "variable.damage_nearby_mobs"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.nugget.holding" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "holding" ]
+				}
+			}
+		},
+		"controller.animation.nugget.look_at_target" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "look_at_target_default" ],
+					"transitions" : [
+						{
+							"gliding" : "query.is_gliding"
+						},
+						{
+							"swimming" : "query.is_swimming"
+						}
+					]
+				},
+				"gliding" : {
+					"animations" : [ "look_at_target_gliding" ],
+					"transitions" : [
+						{
+							"swimming" : "query.is_swimming"
+						},
+						{
+							"default" : "!query.is_gliding"
+						}
+					]
+				},
+				"swimming" : {
+					"animations" : [ "look_at_target_swimming" ],
+					"transitions" : [
+						{
+							"gliding" : "query.is_gliding"
+						},
+						{
+							"default" : "!query.is_swimming"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.nugget.move" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "move" ]
+				}
+			}
+		},
+		"controller.animation.nugget.mob.human.walk" : {
+			"initial_state" : "walking",
+			"states" : {
+				"walking" : {
+					"animations" : [ "walk" ]
+				}
+			}
+		},
+		"controller.animation.nugget.riding" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"riding" : "query.is_riding"
+						}
+					]
+				},
+				"riding" : {
+					"animations" : [ "riding.arms", "riding.legs", "riding" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_riding"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.nugget.sneaking" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"sneaking" : "query.is_sneaking"
+						}
+					]
+				},
+				"sneaking" : {
+					"animations" : [ "sneaking" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_sneaking"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.nugget.swimming" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"swimming" : "variable.swim_amount > 0.0"
+						}
+					]
+				},
+				"swimming" : {
+					"animations" : [ "swimming" ],
+					"transitions" : [
+						{
+							"default" : "variable.swim_amount <= 0.0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.nugget.use_item_progress" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"use_item_progress" : "( variable.use_item_interval_progress > 0.0 ) || ( variable.use_item_startup_progress > 0.0 )"
+						}
+					]
+				},
+				"use_item_progress" : {
+					"animations" : [ "use_item_progress" ],
+					"transitions" : [
+						{
+							"default" : "( variable.use_item_interval_progress <= 0.0 ) && ( variable.use_item_startup_progress <= 0.0 )"
+						}
+					]
+				}
+			}
+		}
+	}
+}

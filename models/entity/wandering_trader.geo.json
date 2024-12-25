@@ -1,6 +1,6 @@
 {
 	"format_version": "1.8.0",
-	"geometry.villager_v2": {
+	"geometry.wandering_trader": {
 		"texturewidth": 64,
 		"textureheight": 64,
 		"visible_bounds_width": 3,
@@ -37,14 +37,13 @@
 			{
 				"name": "_head",
 				"parent": "head",
-				"pivot": [0, 15, 0],
+				"pivot": [0, 14, 0],
 				"cubes": [
-					{"origin": [-4, 15, -4], "size": [8, 5, 5], "uv": [0, 1]},
 					{"origin": [-7, 15, 0], "size": [3, 7, 0], "uv": [0, 40]},
+					{"origin": [-4, 15, -4], "size": [8, 5, 5], "uv": [0, 1]},
+					{"origin": [-4, 15, -4], "size": [8, 5, 5], "uv": [27, 32], "inflate": 0.2},
 					{"origin": [4, 15, 0], "size": [3, 7, 0], "uv": [11, 40]},
-					{"origin": [-4, 20, 0], "size": [8, 3, 0], "uv": [3, 37]},
-					{"origin": [-4, 20, -4], "size": [8, 3, 5], "uv": [38, 0]},
-					{"origin": [-8, 20, -8], "size": [16, 0, 13], "uv": [18, 49]}
+					{"origin": [-4, 20, 0], "size": [8, 3, 0], "uv": [3, 37]}
 				]
 			},
 			{

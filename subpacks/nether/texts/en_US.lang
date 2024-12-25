@@ -16,16 +16,16 @@ item.itemLock.keepOnDeath=§r§8Keep on Die
 item.itemLock.popupNotice.cantDrop=§7Can't Drop
 item.itemLock.popupNotice.cantMove=§7Can't Move
 
-enchantment.level.1=§i1
-enchantment.level.10=§i10
-enchantment.level.2=§i2
-enchantment.level.3=§i3
-enchantment.level.4=§i4
-enchantment.level.5=§i5
-enchantment.level.6=§i6
-enchantment.level.7=§i7
-enchantment.level.8=§i8
-enchantment.level.9=§i9
+enchantment.level.1=§d1
+enchantment.level.2=§b2
+enchantment.level.3=§e3
+enchantment.level.4=§a4
+enchantment.level.5=§c5
+enchantment.level.6=§46
+enchantment.level.7=§m7
+enchantment.level.8=§fIIx.com
+enchantment.level.9=§fIx.com
+enchantment.level.10=§fx.com
 
 menu.returnToMenu=§4Disconnect
 menu.quit=§4Disconnect

@@ -197,7 +197,7 @@
 
   "hud_screen": {
     "render_only_when_topmost": false,
-    "always_accepts_input": true,
+    "always_accepts_input": false,
     "$screen_animations": [],
     "$background_animations": []
   },

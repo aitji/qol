@@ -1,0 +1,1013 @@
+{
+    "namespace": "hud_ds-cvr",
+    
+    "pocket_padding": {
+      "type": "panel",
+      "size": [ "100%", 32 ],
+      "bindings": [
+        { "binding_name": "#hud_visible_not_centered" },
+        { "binding_name": "#show_survival_ui" },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#hud_visible_not_centered and #show_survival_ui)",
+          "target_property_name": "#visible"
+        }
+      ]
+    },
+    
+    
+    "chunk_label_panel": {
+      "type": "image",
+      "texture": "$dimz_cvr_chunk_info_background_texture",
+      "size": "$dimz_cvr_chunk_label_background_size",
+      "anchor_from": "$dmz_clp_anchor_from",
+      "anchor_to": "$dmz_clp_anchor_to",
+      "offset": "$dmz_clp_offset",
+      "color": "$dimz_cvr_chunk_info_background_color",
+      "alpha": "$dimz_cvr_chunk_info_background_alpha",
+      "variables": [
+        {
+          "requires": "(not $dimz_cvr_reverse)",
+          "$dmz_clp_anchor_from": "bottom_right",
+          "$dmz_clp_anchor_to": "bottom_left",
+          "$dmz_clp_offset": [ 0, -2 ]
+        },
+        {
+          "requires": "$dimz_cvr_reverse",
+          "$dmz_clp_anchor_from": "bottom_left",
+          "$dmz_clp_anchor_to": "bottom_right",
+          "$dmz_clp_offset": [ 0, -2 ]
+        }
+      ],
+      "controls": [
+        {
+          "none": {
+            "type": "label",
+            "text": "dimzChunkViewer.chunkPanel.none",
+            "layer": 1,
+            "shadow": true,
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "chunk_middle",
+                "source_property_name": "(not #visible)",
+                "target_property_name": "#is_chunk_middle"
+              },
+              {
+                "binding_type": "view",
+                "source_control_name": "chunk_edge",
+                "source_property_name": "(not #visible)",
+                "target_property_name": "#is_chunk_edge"
+              },
+              {
+                "binding_type": "view",
+                "source_control_name": "chunk_corner",
+                "source_property_name": "(not #visible)",
+                "target_property_name": "#is_chunk_corner"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(#is_chunk_middle and #is_chunk_edge and #is_chunk_corner)",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "chunk_middle": {
+            "type": "label",
+            "text": "dimzChunkViewer.chunkPanel.chunkMiddle",
+            "layer": 1,
+            "shadow": true,
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "player_position_data",
+                "source_property_name": "(((#in_chunk_x = 7) or (#in_chunk_x = 8)) and ((#in_chunk_z = 7) or (#in_chunk_z = 8)))",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "chunk_edge": {
+            "type": "label",
+            "text": "dimzChunkViewer.chunkPanel.chunkEdge",
+            "layer": 1,
+            "shadow": true,
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "player_position_data",
+                "source_property_name": "(((#in_chunk_x > 0) and (#in_chunk_x < 15)) and ((#in_chunk_z > 0) and (#in_chunk_z < 15)))",
+                "target_property_name": "#is_edge"
+              },
+              {
+                "binding_type": "view",
+                "source_control_name": "chunk_corner",
+                "source_property_name": "(not #visible)",
+                "target_property_name": "#is_not_corner"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not #is_edge and #is_not_corner)",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        },
+        {
+          "chunk_corner": {
+            "type": "label",
+            "text": "dimzChunkViewer.chunkPanel.chunkCorner",
+            "layer": 1,
+            "shadow": true,
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "player_position_data",
+                "source_property_name": "(((#in_chunk_x = 0) or (#in_chunk_x = 15)) and ((#in_chunk_z = 0) or (#in_chunk_z = 15)))",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    
+    "chunk_position_panel": {
+      "type": "image",
+      "texture": "$dimz_cvr_chunk_info_background_texture",
+      "size": "$dimz_cvr_chunk_position_background_size",
+      "anchor_from": "$dmz_cpp_anchor_from",
+      "anchor_to": "$dmz_cpp_anchor_to",
+      "offset": "$dmz_cpp_offset",
+      "color": "$dimz_cvr_chunk_info_background_color",
+      "alpha": "$dimz_cvr_chunk_info_background_alpha",
+      "variables": [
+        {
+          "requires": "(not $dimz_cvr_reverse)",
+          "$dmz_cpp_anchor_from": "top_right",
+          "$dmz_cpp_anchor_to": "top_left",
+          "$dmz_cpp_offset": [ 0, 2 ]
+        },
+        {
+          "requires": "$dimz_cvr_reverse",
+          "$dmz_cpp_anchor_from": "top_left",
+          "$dmz_cpp_anchor_to": "top_right",
+          "$dmz_cpp_offset": [ 0, 2 ]
+        }
+      ],
+      "controls": [
+        {
+          "text": {
+            "type": "label",
+            "text": "#text",
+            "layer": 1,
+            "shadow": true,
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "player_position_data",
+                "source_property_name": "('§zChunk:\nX: ' + #chunk_x + ' (' + #in_chunk_x + ')\nY: ' + #chunk_y + ' (' + #in_chunk_y + ')\nZ: ' + #chunk_z + ' (' + #in_chunk_z + ')')",
+                "target_property_name": "#text"
+              }
+            ]
+          }
+        },
+        {
+          "paperdoll_holder": {
+            "ignored": "(not (($dimz_cvr_anchor_from = 'top_left') and ($dimz_cvr_anchor_to = 'top_left')))",
+            "type": "panel",
+            "size": [ 0, 0 ],
+            "anchor_from": "right_middle",
+            "anchor_to": "left_middle",
+            "controls": [
+              {
+                "paperdoll@hud.hud_player_renderer": {
+                  "anchor_from": "left_middle",
+                  "anchor_to": "left_middle",
+                  "offset": [ 15, -5 ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    
+    "direction_label": {
+      "type": "label",
+      "text_alignment": "center",
+      "font_scale_factor": 0.963,
+      "font_type": "default",
+      "shadow": true
+    },
+    
+    "direction_text_panel": {
+      "type": "panel",
+      "size": [ "100%", "100%" ],
+      "controls": [
+        {
+          "east@hud_ds-cvr.direction_label": {
+            "text": "E",
+            "anchor_from": "right_middle",
+            "anchor_to": "right_middle",
+            "offset": [ -0.5, 0 ]
+          }
+        },
+        {
+          "south@hud_ds-cvr.direction_label": {
+            "text": "S",
+            "anchor_from": "bottom_middle",
+            "anchor_to": "bottom_middle",
+            "offset": [ 0, -0.5 ]
+          }
+        },
+        {
+          "west@hud_ds-cvr.direction_label": {
+            "text": "W",
+            "anchor_from": "left_middle",
+            "anchor_to": "left_middle",
+            "offset": [ 1.5, 0 ]
+          }
+        },
+        {
+          "north@hud_ds-cvr.direction_label": {
+            "text": "N",
+            "anchor_from": "top_middle",
+            "anchor_to": "top_middle",
+            "offset": [ 0, 0 ]
+          }
+        }
+      ]
+    },
+    
+    
+    "slime_chunk_image": {
+      "type": "image",
+      "texture": "('textures/ui/chunk_viewer/slime/dimz_slime_' + $slime_id)",
+      "size": "$slime_chunk_scale_size",
+      "anchor_from": "center",
+      "anchor_to": "center",
+      "alpha": 0.6
+    },
+    
+    "slime_chunk_panel": {
+      "type": "panel",
+      "size": [ "100%cm", "100%cm" ],
+      "anchor_from": "bottom_right",
+      "anchor_to": "center",
+      "controls": [
+        {
+          "1_1@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "1_1",
+            "offset": [ "-300%", "-300%" ]
+          }
+        },
+        {
+          "1_2@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "1_2",
+            "offset": [ "-200%", "-300%" ]
+          }
+        },
+        {
+          "1_3@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "1_3",
+            "offset": [ "-100%", "-300%" ]
+          }
+        },
+        {
+          "1_4@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "1_4",
+            "offset": [ "0%", "-300%" ]
+          }
+        },
+        {
+          "1_5@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "1_5",
+            "offset": [ "100%", "-300%" ]
+          }
+        },
+        {
+          "1_6@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "1_6",
+            "offset": [ "200%", "-300%" ]
+          }
+        },
+        {
+          "1_7@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "1_7",
+            "offset": [ "300%", "-300%" ]
+          }
+        },
+        {
+          "2_1@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "2_1",
+            "offset": [ "-300%", "-200%" ]
+          }
+        },
+        {
+          "2_2@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "2_2",
+            "offset": [ "-200%", "-200%" ]
+          }
+        },
+        {
+          "2_3@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "2_3",
+            "offset": [ "-100%", "-200%" ]
+          }
+        },
+        {
+          "2_4@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "2_4",
+            "offset": [ "0%", "-200%" ]
+          }
+        },
+        {
+          "2_5@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "2_5",
+            "offset": [ "100%", "-200%" ]
+          }
+        },
+        {
+          "2_6@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "2_6",
+            "offset": [ "200%", "-200%" ]
+          }
+        },
+        {
+          "2_7@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "2_7",
+            "offset": [ "300%", "-200%" ]
+          }
+        },
+        {
+          "3_1@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "3_1",
+            "offset": [ "-300%", "-100%" ]
+          }
+        },
+        {
+          "3_2@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "3_2",
+            "offset": [ "-200%", "-100%" ]
+          }
+        },
+        {
+          "3_3@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "3_3",
+            "offset": [ "-100%", "-100%" ]
+          }
+        },
+        {
+          "3_4@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "3_4",
+            "offset": [ "0%", "-100%" ]
+          }
+        },
+        {
+          "3_5@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "3_5",
+            "offset": [ "100%", "-100%" ]
+          }
+        },
+        {
+          "3_6@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "3_6",
+            "offset": [ "200%", "-100%" ]
+          }
+        },
+        {
+          "3_7@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "3_7",
+            "offset": [ "300%", "-100%" ]
+          }
+        },
+        {
+          "4_1@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "4_1",
+            "offset": [ "-300%", "0%" ]
+          }
+        },
+        {
+          "4_2@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "4_2",
+            "offset": [ "-200%", "0%" ]
+          }
+        },
+        {
+          "4_3@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "4_3",
+            "offset": [ "-100%", "0%" ]
+          }
+        },
+        {
+          "4_4@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "4_4",
+            "offset": [ "0%", "0%" ]
+          }
+        },
+        {
+          "4_5@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "4_5",
+            "offset": [ "100%", "0%" ]
+          }
+        },
+        {
+          "4_6@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "4_6",
+            "offset": [ "200%", "0%" ]
+          }
+        },
+        {
+          "4_7@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "4_7",
+            "offset": [ "300%", "0%" ]
+          }
+        },
+        {
+          "5_1@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "5_1",
+            "offset": [ "-300%", "100%" ]
+          }
+        },
+        {
+          "5_2@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "5_2",
+            "offset": [ "-200%", "100%" ]
+          }
+        },
+        {
+          "5_3@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "5_3",
+            "offset": [ "-100%", "100%" ]
+          }
+        },
+        {
+          "5_4@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "5_4",
+            "offset": [ "0%", "100%" ]
+          }
+        },
+        {
+          "5_5@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "5_5",
+            "offset": [ "100%", "100%" ]
+          }
+        },
+        {
+          "5_6@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "5_6",
+            "offset": [ "200%", "100%" ]
+          }
+        },
+        {
+          "5_7@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "5_7",
+            "offset": [ "300%", "100%" ]
+          }
+        },
+        {
+          "6_1@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "6_1",
+            "offset": [ "-300%", "200%" ]
+          }
+        },
+        {
+          "6_2@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "6_2",
+            "offset": [ "-200%", "200%" ]
+          }
+        },
+        {
+          "6_3@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "6_3",
+            "offset": [ "-100%", "200%" ]
+          }
+        },
+        {
+          "6_4@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "6_4",
+            "offset": [ "0%", "200%" ]
+          }
+        },
+        {
+          "6_5@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "6_5",
+            "offset": [ "100%", "200%" ]
+          }
+        },
+        {
+          "6_6@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "6_6",
+            "offset": [ "200%", "200%" ]
+          }
+        },
+        {
+          "6_7@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "6_7",
+            "offset": [ "300%", "200%" ]
+          }
+        },
+        {
+          "7_1@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "7_1",
+            "offset": [ "-300%", "300%" ]
+          }
+        },
+        {
+          "7_2@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "7_2",
+            "offset": [ "-200%", "300%" ]
+          }
+        },
+        {
+          "7_3@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "7_3",
+            "offset": [ "-100%", "300%" ]
+          }
+        },
+        {
+          "7_4@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "7_4",
+            "offset": [ "0%", "300%" ]
+          }
+        },
+        {
+          "7_5@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "7_5",
+            "offset": [ "100%", "300%" ]
+          }
+        },
+        {
+          "7_6@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "7_6",
+            "offset": [ "200%", "300%" ]
+          }
+        },
+        {
+          "7_7@hud_ds-cvr.slime_chunk_image": {
+            "$slime_id": "7_7",
+            "offset": [ "300%", "300%" ]
+          }
+        }
+      ]
+    },
+    
+    "anchored_slime_chunk": {
+      "type": "image",
+      "size": [ "100%", "100%" ],
+      "use_anchored_offset": true,
+      "property_bag": { // guess why not use the same method☕
+        "#size_binding_x": 20.0,
+        "#size_binding_y": 20.0
+      },
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "player_position_data",
+          "source_property_name": "#reverse_chunk_x",
+          "target_property_name": "#size_binding_x"
+        },
+        {
+          "binding_type": "view",
+          "source_control_name": "player_position_data",
+          "source_property_name": "#reverse_chunk_z",
+          "target_property_name": "#size_binding_y"
+        }
+      ],
+      "controls": [
+        {
+          "slime_chunk_image@hud_ds-cvr.slime_chunk_panel": {}
+        }
+      ]
+    },
+    
+    
+    "chunk_border_image": {
+      "type": "image",
+      "texture": "textures/ui/chunk_viewer/chunk_border",
+      "size": "$chunk_border_scale_size",
+      "anchor_from": "top_left",
+      "anchor_to": "center",
+      "color": [ 0.85, 0.85, 0.85 ],
+      "controls": [
+        {
+          "slime_chunk_control": {
+            "type": "panel",
+            "size": "$slime_chunk_step_scale",
+            "layer": -1,
+            "controls": [
+              {
+                "slime_chunk@hud_ds-cvr.anchored_slime_chunk": {
+                  "anchor_from": "top_left",
+                  "anchor_to": "top_left"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    
+    "anchored_chunk_border": {
+      "type": "panel",
+      "size": [ "100%cm", "100%cm" ],
+      "use_anchored_offset": true,
+      "property_bag": {
+        "#anchored_offset_value_x": 1.25,
+        "#anchored_offset_value_y": 1.25
+      },
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "player_position_data",
+          "source_property_name": "#reverse_in_chunk_x",
+          "target_property_name": "#anchored_offset_value_x"
+        },
+        {
+          "binding_type": "view",
+          "source_control_name": "player_position_data",
+          "source_property_name": "#reverse_in_chunk_z",
+          "target_property_name": "#anchored_offset_value_y"
+        }
+      ],
+      "controls": [
+        {
+          "chunk_border_image@hud_ds-cvr.chunk_border_image": {
+            "offset": "$chunk_border_scale_offset"
+          }
+        }
+      ]
+    },
+    
+    
+    "expanded_chunk_position_panel": {
+      "type": "panel",
+      "size": [ "100%c", "100%c" ],
+      "anchor_from": "bottom_middle",
+      "anchor_to": "top_middle",
+      "controls": [
+        {
+          "text": {
+            "type": "label",
+            "text": "#text",
+            "size": [ "default", "default" ],
+            "shadow": true,
+            "bindings": [
+              {
+                "binding_type": "view",
+                "source_control_name": "player_position_data",
+                "source_property_name": "(#chunk_x * 16)",
+                "target_property_name": "#from_chunk_x"
+              },
+              {
+                "binding_type": "view",
+                "source_control_name": "player_position_data",
+                "source_property_name": "(#chunk_z * 16)",
+                "target_property_name": "#from_chunk_z"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(#from_chunk_x + 15)",
+                "target_property_name": "#to_chunk_x"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(#from_chunk_z + 15)",
+                "target_property_name": "#to_chunk_z"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "('§z' + #from_chunk_x + ', ' + #from_chunk_z + ' -> ' + #to_chunk_x + ', ' + #to_chunk_z)",
+                "target_property_name": "#text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    
+    "expanded_chunk_viewer_panel": {
+      "type": "panel",
+      "size": [ 200, 150 ],
+      
+      "$chunk_border_step_scale": [ 1, 1 ],
+      "$chunk_border_scale_size": [ 208, 208 ],
+      "$chunk_border_scale_offset": [ 8, 8 ],
+      "$slime_chunk_step_scale": [ 16, 16 ],
+      "$slime_chunk_scale_size": [ 6144, 6144 ],
+      
+      "controls": [
+        {
+          "background": {
+            "type": "image",
+            "texture": "textures/ui/chunk_viewer/chunk_background",
+            "size": [ 198, 148],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "layer": 1
+          }
+        },
+        {
+          "content": {
+            "type": "panel",
+            "size": [ "100% - 12px", "100% - 12px" ],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "layer": 2,
+            "controls": [
+              {
+                "inner_background": {
+                  "type": "image",
+                  "texture": "textures/ui/chunk_viewer/chunk_inner_background",
+                  "layer": 5
+                }
+              },
+              {
+                "chunk_viewer@hud_ds-cvr.chunk_viewer": {
+                  "layer": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "expanded_chunk_position_panel@hud_ds-cvr.expanded_chunk_position_panel": {
+            "ignored": "(not $dimz_cvr_show_chunk_info)"
+          }
+        }
+      ]
+    },
+    
+    "expanded_chunk_viewer_control_panel": {
+      "type": "collection_panel",
+      "size": [ "100%cm", "100%cm" ],
+      "offset": [ 0, "10%" ],
+      "anchor_from": "top_middle",
+      "anchor_to": "top_middle",
+      "collection_name": "expanded_chunk_viewer_panels",
+      "factory": {
+        "name": "expanded_chunk_viewer_panel_factory",
+        "control_name": "@hud_ds-cvr.expanded_chunk_viewer_panel",
+        "max_children_size": 1
+      },
+      "bindings": [
+        {
+          "binding_name": "#player_position_visible",
+          "binding_condition": "always"
+        },
+        {
+          "binding_type": "view",
+          "source_control_name": "expand_button_toggle",
+          "source_property_name": "#toggle_state",
+          "target_property_name": "#button"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "((#button and #player_position_visible) * 1)",
+          "target_property_name": "#collection_length"
+        }
+      ]
+    },
+    
+    "map_expand_button@common_toggles.light_text_toggle": {
+      "$toggle_name": "map_expand_buttons",
+      "$toggle_view_binding_name": "expand_button_toggle",
+      "$button_text": "",
+      
+      "$toggle_focus_enabled": false
+    },
+    
+    
+    "chunk_viewer": {
+      "type": "panel",
+      "size": [ "100% - 2px", "100% - 2px" ],
+      
+      "$chunk_border_step_scale|default": "$dimz_cvr_chunk_border_step_scale",
+      "$chunk_border_scale_size|default": [ 260, 260 ],
+      "$chunk_border_scale_offset|default": [ 10, 10 ],
+      "$slime_chunk_step_scale|default": "$dimz_cvr_slime_chunk_step_scale",
+      "$slime_chunk_scale_size|default": [ 7680, 7680 ],
+      "$slime_chunk_scale_offset|default": [ 0, 0 ],
+      
+      "clips_children": true,
+      "controls": [
+        {
+          "player_icon": {
+            "type": "image",
+            "texture": "textures/ui/Ping_Offline_Red_Dark",
+            "size": [ 3.3, 3.3 ],
+            "layer": 3
+          }
+        },
+        {
+          "direction_text@hud_ds-cvr.direction_text_panel": {
+            "ignored": "(not $dimz_cvr_show_direction_label)",
+            "layer": 4
+          }
+        },
+        {
+          "chunk_border_control": {
+            "type": "panel",
+            "size": "$chunk_border_step_scale",
+            "layer": 2,
+            "controls": [
+              {
+                "chunk_border@hud_ds-cvr.anchored_chunk_border": {
+                  "anchor_from": "top_left",
+                  "anchor_to": "top_left"
+                }
+              }
+            ]
+          }
+        }
+      ] 
+    },
+    
+    "chunk_viewer_panel": {
+      "type": "panel",
+      "size": [ 72, 72 ],
+      "anchor_from": "$dimz_cvr_anchor_from",
+      "anchor_to": "$dimz_cvr_anchor_to",
+      "offset": "$dimz_cvr_offset",
+      "controls": [
+        {
+          "background": {
+            "type": "image",
+            "texture": "textures/ui/chunk_viewer/chunk_background",
+            "size": [ 70, 70],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "layer": 1
+          }
+        },
+        {
+          "content": {
+            "type": "panel",
+            "size": [ "100% - 12px", "100% - 12px" ],
+            "anchor_from": "center",
+            "anchor_to": "center",
+            "layer": 2,
+            "controls": [
+              {
+                "inner_background": {
+                  "type": "image",
+                  "texture": "textures/ui/chunk_viewer/chunk_inner_background",
+                  "layer": 5
+                }
+              },
+              {
+                "chunk_viewer@hud_ds-cvr.chunk_viewer": {
+                  "layer": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "chunk_position_panel@hud_ds-cvr.chunk_position_panel": {
+            "ignored": "(not $dimz_cvr_show_chunk_info)"
+          }
+        },
+        {
+          "chunk_label_panel@hud_ds-cvr.chunk_label_panel": {
+            "ignored": "(not $dimz_cvr_show_chunk_info)"
+          }
+        },
+        {
+          "map_expand_button@common.root_panel": {
+            "ignored": "(not $touch)",
+            "size": [ "100%", "100%" ],
+            "layer": 12,
+            "alpha": 0,
+            "propagate_alpha": true,
+            "prevent_touch_input": true,
+            "controls": [
+              {
+                "button@hud_ds-cvr.map_expand_button": {}
+              }
+            ]
+          }
+        },
+        {
+          "map_expand_key@hud_ds-cvr.map_expand_button": {
+            "$button_mappings": [
+              {
+                "from_button_id": "button.scoreboard",
+                "to_button_id": "button.menu_select",
+                "mapping_type": "global"
+              }
+            ],
+            "ignored": "$touch",
+            "size": [ "100%", "100%" ],
+            "alpha": 0,
+            "propagate_alpha": true
+          }
+        }
+      ],
+      "bindings": [
+        {
+          "binding_name": "#player_position_visible",
+          "binding_name_override": "#visible",
+          "binding_condition": "always"
+        }
+      ]
+    },
+    
+    
+    "player_position": {
+      "type": "panel",
+      "visible": false,
+      "bindings": [
+        {
+          "binding_type": "view",
+          "source_control_name": "player_position_text",
+          "source_property_name": "#text",
+          "target_property_name": "#player_position_text"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#player_position_text - '-1' - '-2' - '-3' - '-4' - '-5' - '-6' - '-7' - '-8' - '-9')",
+          "target_property_name": "#raw_position_text_2"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#raw_position_text_2 - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9' - '0')",
+          "target_property_name": "#raw_position_text"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "((#player_position_text - ' ') - (#raw_position_text - ' ' - ':' - ','))",
+          "target_property_name": "#raw_position_number"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#raw_position_number - ':')",
+          "target_property_name": "#position_x"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#raw_position_number - (':' + #position_x + ','))",
+          "target_property_name": "#position_y"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#raw_position_number - (':' + #position_x + ',' + #position_y + ','))",
+          "target_property_name": "#position_z"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "((#position_x - (#position_x < 0) * 15) / 16)",
+          "target_property_name": "#chunk_x"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "((#position_y - (#position_y < 0) * 15) / 16)",
+          "target_property_name": "#chunk_y"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "((#position_z - (#position_z < 0) * 15) / 16)",
+          "target_property_name": "#chunk_z"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#position_x - (#chunk_x * 16))",
+          "target_property_name": "#in_chunk_x"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#position_y - (#chunk_y * 16))",
+          "target_property_name": "#in_chunk_y"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#position_z - (#chunk_z * 16))",
+          "target_property_name": "#in_chunk_z"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#chunk_x * -1)",
+          "target_property_name": "#reverse_chunk_x"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#chunk_z * -1)",
+          "target_property_name": "#reverse_chunk_z"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#in_chunk_x * -1)",
+          "target_property_name": "#reverse_in_chunk_x"
+        },
+        {
+          "binding_type": "view",
+          "source_property_name": "(#in_chunk_z * -1)",
+          "target_property_name": "#reverse_in_chunk_z"
+        }
+      ]
+    }
+  }

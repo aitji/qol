@@ -11,7 +11,7 @@
           "type": "label",
           "color": "$main_header_text_color",
           "layer": 2,
-          "text": "§7nether coordinate sub-pack are enabled",
+          "text": "§7nether coordinate & mini-maps sub-pack are enabled",
           "size": [ "default", 10 ],
           "max_size": [ "100%", "100%" ]
         }

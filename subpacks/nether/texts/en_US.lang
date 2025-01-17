@@ -157,3 +157,8 @@ containerA.itemHighlighter.searchBar=Search Item..
 containerA.switcherHoverText.default=§a§lin §rNormal Mode
 containerA.switcherHoverText.autoplace=§a§lin §rAutoplace Mode
 containerA.switcherHoverText.drop=§a§lin §rDrop Mode
+
+dimzChunkViewer.chunkPanel.none=None
+dimzChunkViewer.chunkPanel.chunkMiddle=Chunk Middle
+dimzChunkViewer.chunkPanel.chunkEdge=Chunk Edge
+dimzChunkViewer.chunkPanel.chunkCorner=Chunk Corner

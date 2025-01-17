@@ -9,6 +9,25 @@
           {"nether_pos@hud.nether_pos": {}},
           {"hud_player_position@binding.hud_player_position": {}}
         ]
+      },
+      {
+        "control_name": "non_centered_gui_padding",
+        "operation": "remove"
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "pocket_padding@hud_ds-cvr.pocket_padding": {}
+          },
+          {
+            "chunk_viewer_panel@hud_ds-cvr.chunk_viewer_panel": {
+              "layer": 1,
+              "ignored": "(not (($dimz_cvr_anchor_from = 'top_left') and ($dimz_cvr_anchor_to = 'top_left')))"
+            }
+          }
+        ]
       }
     ]
   },
@@ -65,6 +84,71 @@
           "enable_profanity_filter": false,
           "bindings": [{"binding_name": "$text_binding","binding_name_override": "#text"}]
         }
+      }
+    ]
+  },
+  "not_centered_gui_elements/hud_player_rend_pocket": {
+    "ignored": "(($dimz_cvr_anchor_from = 'top_left') and ($dimz_cvr_anchor_to = 'top_left'))",
+    "offset": [ 40, 40 ],
+    "bindings": [
+      {
+        "binding_name": "#show_survival_ui",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+  
+  "centered_gui_elements/hud_player_rend_desktop": {
+    "ignored": "(($dimz_cvr_anchor_from = 'top_left') and ($dimz_cvr_anchor_to = 'top_left'))"
+  },
+  
+  "not_centered_gui_elements": {
+    "modifications": [
+      {
+        "control_name": "hud_player_rend_pocket",
+        "operation": "insert_after",
+        "value": {
+          "hud_player_rend_pocket_creative@hud.hud_player_renderer": {
+            "offset": [ 40, 15 ],
+            "anchor_from": "top_left",
+            "anchor_to": "top_left",
+            "bindings": [
+              {
+                "binding_name": "(not #show_survival_ui)",
+                "binding_name_override": "#visible"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  
+  
+  "root_panel/chat_stack/paper_doll_padding": {
+    "ignored": "(($dimz_cvr_anchor_from = 'top_left') and ($dimz_cvr_anchor_to = 'top_left'))"
+  },
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "player_position_data@hud_ds-cvr.player_position": {}
+          },
+          {
+            "chunk_viewer_panel@hud_ds-cvr.chunk_viewer_panel": {
+              "layer": 1,
+              "ignored": "(($dimz_cvr_anchor_from = 'top_left') and ($dimz_cvr_anchor_to = 'top_left'))"
+            }
+          },
+          {
+            "expanded_chunk_viewer_panel@hud_ds-cvr.expanded_chunk_viewer_control_panel": {
+              "layer": 50
+            }
+          }
+        ]
       }
     ]
   },

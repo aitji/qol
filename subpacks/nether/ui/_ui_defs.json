@@ -12,6 +12,8 @@
     "ui/brewing_icons.json",
 
     "ui/container_item.json",
-    "ui/container_item_data.json"
+    "ui/container_item_data.json",
+
+    "ui/hud_.json"
   ]
 }

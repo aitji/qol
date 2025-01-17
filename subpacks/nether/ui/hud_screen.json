@@ -36,7 +36,7 @@
       {
         "binding_type": "view",
         "source_control_name": "hud_player_position",
-        "source_property_name": "(('§fOverworld§c: ' + (#x_pos * 8) + ', ' + (#z_pos * 8)",
+        "source_property_name": "(('§c| §fHome§c: ' + (#x_pos * 8) + ', ' + (#z_pos * 8)",
         "target_property_name": "#text"
       }
     ],
@@ -61,7 +61,7 @@
       {
         "binding_type": "view",
         "source_control_name": "hud_player_position",
-        "source_property_name": "(('§fNether§c: ' + (#x_pos / 8) + ', ' + (#z_pos / 8))",
+        "source_property_name": "(('§c| §fHell§c: ' + (#x_pos / 8) + ', ' + (#z_pos / 8))",
         "target_property_name": "#text"
       }
     ]

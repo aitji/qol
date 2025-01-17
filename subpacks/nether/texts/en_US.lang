@@ -1,6 +1,6 @@
 map.position=Position: %s, %s, %s
 
-hudScreen.daysPlayed=§fDays§c: %s
+hudScreen.daysPlayed=§c| §fDays§c: %s
 permissions.chatmute=§fYou has been §cmuted§f, You can't type until some §cAdmin§f un-muted you
 progressScreen.message.locating=Downloading §c@aitji§f textures pack...
 progressScreen.message.resourceLoading=Loading §c@aitji§f terrain

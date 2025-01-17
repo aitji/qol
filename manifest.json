@@ -17,52 +17,52 @@
     "subpacks": [
         {
             "folder_name": "old",
-            "name": "\n\n§6Old But Gold§r - Taking You Back To Retro Pixel Feels in Minecraft!",
+            "name": "\n\n§6oldest§r - taking a textures/sounds back to the past",
             "memory_tier": 1
         },
         {
             "folder_name": "funny",
-            "name": "\n\n§dLaugh-A-Lot Pack§r - Guaranteed LOLs While Building Dirt Houses!",
+            "name": "\n\n§dfunny§r - make a vibes sound more meme",
             "memory_tier": 1
         },
         {
             "folder_name": "hitbox",
-            "name": "\n\n§ePeek-A-Boo Hitbox§r - Spot Players Like You're A Pro Detective!",
+            "name": "\n\n§ehitbox§r - display a players hitbox thought the wall, work on multiplayer too",
             "memory_tier": 1
         },
         {
             "folder_name": "inv",
-            "name": "\n\n§bInventory Spy§r - Watch Your Inventory Chill At The Bottom Right!",
+            "name": "\n\n§binventory§r - show a inventory on hud",
             "memory_tier": 1
         },
         {
             "folder_name": "creative",
-            "name": "\n\n§aCheater's Delight Creative Mode§r - Hack The Map Like Bob The Builder on Steroids!",
+            "name": "\n\n§adebug§r - debug mode for sure",
             "memory_tier": 1
         },
         {
             "folder_name": "cheat",
-            "name": "\n\n§6STOP! Cheater Detected!§r - Be Fair or Go Home Pack!",
+            "name": "\n\n§6entity cheat§r - be fair or back home, see a entity thought wall, work on multiplayer too",
             "memory_tier": 1
         },
-        {
-            "folder_name": "toast",
-            "name": "\n\n§9Toast§r - toast hud screen (template)",
-            "memory_tier": 1
-        },
+        // {
+        //     "folder_name": "toast",
+        //     "name": "\n\n§9toast§r - toast hud screen (template)",
+        //     "memory_tier": 1
+        // },
         {
             "folder_name": "nether",
-            "name": "\n\n§cNether Navigator 3000§r - Always Know Where You Are, Even When Lost in Lava!",
+            "name": "\n\n§chell & maps§r - display more information of coordinate and show slime chunk mini maps",
             "memory_tier": 1
         },
         {
             "folder_name": "dark",
-            "name": "\n\n§8Edgy Darkness Pack§r - Perfect For Brooding Builders At Midnight!",
+            "name": "\n\n§8dark§r - prefer playing at night times",
             "memory_tier": 1
         },
         {
             "folder_name": "clean",
-            "name": "\n\n§ePerfectly Normal, Absolutely Clean Pack§r - Nothing To See Here... Or Is There?",
+            "name": "\n\n§enothing changes here it just a normal packs",
             "memory_tier": 1
         }
     ]

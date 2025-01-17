@@ -169,7 +169,7 @@
               {
                 "binding_type": "view",
                 "source_control_name": "player_position_data",
-                "source_property_name": "('§zChunk:\nX: ' + #chunk_x + ' (' + #in_chunk_x + ')\nY: ' + #chunk_y + ' (' + #in_chunk_y + ')\nZ: ' + #chunk_z + ' (' + #in_chunk_z + ')')",
+                "source_property_name": "('§z§lChunk§r\n§c| §rX§c:§r ' + #chunk_x + ' (' + #in_chunk_x + ')\n§c| §rY§c:§r ' + #chunk_y + ' (' + #in_chunk_y + ')\n§c| §rZ§c:§r ' + #chunk_z + ' (' + #in_chunk_z + ')')",
                 "target_property_name": "#text"
               }
             ]

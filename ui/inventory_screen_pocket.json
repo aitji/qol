@@ -102,34 +102,6 @@
     ]
   },
   
-  
-  "crafting_panel_2x2/crafting_arrow": {
-    "alpha": 0,
-    "controls": [
-      {
-        "quick_craft_button@crafting.quick_craft_button": {
-          "$button_content": "crafting.crafting_arrow_icon",
-          "size": [16,15]
-        }
-      }
-    ]
-  },
-  
-  "crafting_panel_2x2": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": {
-          "crafting_item_reset_button_panel@container_item_ds-acr.crafting_item_reset_button_panel": {
-            "offset": [-18,28.5],
-            "layer": 3
-          }
-        }
-      }
-    ]
-  },
-  
   "work_bench_panel_3x3": {
     "modifications": [
       {
@@ -155,57 +127,6 @@
             }
           }
         ]
-      }
-    ]
-  },
-  
-  "recipe_inventory_screen_content/content_stack_panel": {
-    "modifications": [
-      {
-        "control_name": "recipe_book",
-        "operation": "insert_before",
-        "value": {
-          "tooltip_button_holder": {
-            "type": "panel",
-            "size": [0,"100%"],
-            "controls": [
-              {
-                "tooltip_button@container_item_ds-acr.tooltip_button_panel": {
-                  "anchor_from": "top_left",
-                  "anchor_to": "top_right",
-                  "bindings": [
-                    {
-                      "binding_type": "global",
-                      "binding_name": "(not #is_survival_layout)",
-                      "binding_name_override": "#visible"
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      },
-      {
-        "control_name": "toolbar_anchor",
-        "operation": "insert_after",
-        "value": {
-          "advanced_button_holder": {
-            "type": "panel",
-            "size": [0,"100%"],
-            "controls": [
-              {
-                "container_item_data@container_item_data_ds-acr.total_data": {}
-              },
-              {
-                "container_control_panel@container_item_ds-acr.container_control_panel": {
-                  "anchor_from": "top_right",
-                  "anchor_to": "top_left"
-                }
-              }
-            ]
-          }
-        }
       }
     ]
   },

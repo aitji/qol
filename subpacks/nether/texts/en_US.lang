@@ -6,8 +6,6 @@ progressScreen.message.locating=Downloading §c@aitji§f textures pack...
 progressScreen.message.resourceLoading=Loading §c@aitji§f terrain
 progressScreen.loading=Login as §c@aitji§f...
 
-tile.waxed_weathered_cut_copper_stairs.name=Softly Waxed Lightly Weathered Old Cut Copper Stairs with a Cool Patina and Slight Oxidation
-
 item.itemLock.cantDrop=§8Can't drop
 item.itemLock.cantMove=§8Can't move
 item.itemLock.hoverText.cantBe.moved=§8Can't moved

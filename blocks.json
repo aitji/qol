@@ -113,5 +113,130 @@
     "spruce_planks": {
         "sound": "wood",
         "textures": "spruce_planks"
+    },
+    "minecraft:infested_stone": {
+        "textures": "infested_stone"
+    },
+    "minecraft:infested_cobblestone": {
+        "textures": "infested_cobblestone"
+    },
+    "minecraft:infested_stone_bricks": {
+        "textures": "infested_stone_bricks"
+    },
+    "minecraft:infested_mossy_stone_bricks": {
+        "textures": "infested_mossy_stone_bricks"
+    },
+    "minecraft:infested_cracked_stone_bricks": {
+        "textures": "infested_cracked_stone_bricks"
+    },
+    "minecraft:infested_chiseled_stone_bricks": {
+        "textures": "infested_chiseled_stone_bricks"
+    },
+    "minecraft:infested_deepslate": {
+        "textures": {
+            "down": "infested_deepslate_top",
+            "side": "infested_deepslate",
+            "up": "infested_deepslate_top"
+        }
+    },
+    "minecraft:waxed_copper": {
+        "textures": "waxed_copper"
+    },
+    "minecraft:waxed_exposed_copper": {
+        "textures": "waxed_exposed_copper"
+    },
+    "minecraft:waxed_weathered_copper": {
+        "textures": "waxed_weathered_copper"
+    },
+    "minecraft:waxed_oxidized_copper": {
+        "textures": "waxed_oxidized_copper"
+    },
+    "minecraft:waxed_chiseled_copper": {
+        "textures": "waxed_chiseled_copper"
+    },
+    "minecraft:waxed_exposed_chiseled_copper": {
+        "textures": "waxed_exposed_chiseled_copper"
+    },
+    "minecraft:waxed_weathered_chiseled_copper": {
+        "textures": "waxed_weathered_chiseled_copper"
+    },
+    "minecraft:waxed_oxidized_chiseled_copper": {
+        "textures": "waxed_oxidized_chiseled_copper"
+    },
+    "minecraft:waxed_copper_bulb": {
+        "textures": "waxed_copper_bulb"
+    },
+    "minecraft:waxed_exposed_copper_bulb": {
+        "textures": "waxed_exposed_copper_bulb"
+    },
+    "minecraft:waxed_weathered_copper_bulb": {
+        "textures": "waxed_weathered_copper_bulb"
+    },
+    "minecraft:waxed_oxidized_copper_bulb": {
+        "textures": "waxed_oxidized_copper_bulb"
+    },
+    "minecraft:waxed_copper_door": {
+        "textures": {
+            "down": "waxed_copper_door_bottom",
+            "side": "waxed_copper_door_top",
+            "up": "waxed_copper_door_bottom"
+        }
+    },
+    "minecraft:waxed_exposed_copper_door": {
+        "textures": {
+            "down": "waxed_exposed_copper_door_bottom",
+            "side": "waxed_exposed_copper_door_top",
+            "up": "waxed_exposed_copper_door_bottom"
+        }
+    },
+    "minecraft:waxed_weathered_copper_door": {
+        "textures": {
+            "down": "waxed_weathered_copper_door_bottom",
+            "side": "waxed_weathered_copper_door_top",
+            "up": "waxed_weathered_copper_door_bottom"
+        }
+    },
+    "minecraft:waxed_oxidized_copper_door": {
+        "textures": {
+            "down": "waxed_oxidized_copper_door_bottom",
+            "side": "waxed_oxidized_copper_door_top",
+            "up": "waxed_oxidized_copper_door_bottom"
+        }
+    },
+    "minecraft:waxed_copper_grate": {
+        "textures": "waxed_copper_grate"
+    },
+    "minecraft:waxed_exposed_copper_grate": {
+        "textures": "waxed_exposed_copper_grate"
+    },
+    "minecraft:waxed_weathered_copper_grate": {
+        "textures": "waxed_weathered_copper_grate"
+    },
+    "minecraft:waxed_oxidized_copper_grate": {
+        "textures": "waxed_oxidized_copper_grate"
+    },
+    "minecraft:waxed_copper_trapdoor": {
+        "textures": "waxed_copper_trapdoor"
+    },
+    "minecraft:waxed_exposed_copper_trapdoor": {
+        "textures": "waxed_exposed_copper_trapdoor"
+    },
+    "minecraft:waxed_weathered_copper_trapdoor": {
+        "textures": "waxed_weathered_copper_trapdoor"
+    },
+    "minecraft:waxed_oxidized_copper_trapdoor": {
+        "textures": "waxed_oxidized_copper_trapdoor"
+    },
+    "minecraft:waxed_cut_copper": {
+        "textures": "waxed_cut_copper"
+    },
+    "minecraft:waxed_exposed_cut_copper": {
+        "textures": "waxed_exposed_cut_copper"
+    },
+    "minecraft:waxed_weathered_cut_copper": {
+        "textures": "waxed_weathered_cut_copper"
+    },
+    "minecraft:waxed_oxidized_cut_copper": {
+        "textures": "waxed_oxidized_cut_copper"
     }
 }

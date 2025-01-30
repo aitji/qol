@@ -89,5 +89,13 @@
                 }
             }
         ]
+    },
+    "highlight_slot_panel": {
+        "modifications": [
+            {
+                "control_name": "white_border",
+                "operation": "remove"
+            }
+        ]
     }
 }

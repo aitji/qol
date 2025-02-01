@@ -4,7 +4,7 @@
 	"quick_craft_icon": {
 		"type": "image",
 		"size": [16, 16],
-		"texture": "textures/ui/quick_craft" // quick_craft_icon: aitji change textures here!
+		"texture": "textures/ui/quick_craft" // quick_craft_icon: change textures here!
 	},
 
 	"quick_craft_button@common_buttons.light_content_button": {

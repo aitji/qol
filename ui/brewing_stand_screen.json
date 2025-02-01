@@ -52,30 +52,4 @@
       }
     ]
   },
-  
-  "brewing_stand_panel/root_panel": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": [
-          {
-            "tooltip_button@container_item_ds-acr.tooltip_button_panel": {
-              "anchor_from": "top_left",
-              "anchor_to": "top_right"
-            }
-          },
-          {
-            "container_item_data@container_item_data_ds-acr.total_data": {}
-          },
-          {
-            "container_control_panel@container_item_ds-acr.container_control_panel": {
-              "anchor_from": "top_right",
-              "anchor_to": "top_left"
-            }
-          }
-        ]
-      }
-    ]
-  }
 }

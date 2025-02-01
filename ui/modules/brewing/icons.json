@@ -76,7 +76,7 @@
 
   "hover_button@common.button": {
     "layer": 15,
-    "$pressed_button_name": "by aitji",
+    "$pressed_button_name": "by DrAv0011",
     "size": [18, 18],
     "sound_volume": 0.0,
     "default_control": "",

@@ -1,16 +1,16 @@
 {
     "ui_defs": [
-        "ui/modules/durability.json",
-        "ui/modules/spectator.json",
-        "ui/modules/enchanted_books.json",
-        "ui/modules/suspicious_stew.json",
-        "ui/modules/quick_crafting.json",
-        "ui/modules/chat_tweaks.json",
+        "ui/durability.json",
+        "ui/spectator_dropdown.json",
+        "ui/enchanted_books.json",
+        "ui/suspicious_stew_info.json",
 
-        "ui/modules/brewing/guide.json",
-        "ui/modules/brewing/icons.json",
+        "ui/quick_crafting.json",
+        "ui/chat_tweaks.json",
+        "ui/brewing_guide.json",
+        "ui/brewing_icons.json",
 
-        "ui/modules/container/item.json",
-        "ui/modules/container/item_data.json"
+        "ui/container_item.json",
+        "ui/container_item_data.json"
     ]
 }

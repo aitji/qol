@@ -1,0 +1,49 @@
+{
+	"switch_toggle@common_toggles.light_image_toggle": {
+		"$unchecked_locked_texture": "textures/ui/toggle_off_disabled",
+		"$checked_locked_texture": "textures/ui/toggle_on_disabled",
+		"$locked_alpha": 1.0
+	},
+	"switch_toggle_collection@common_toggles.light_image_toggle": {
+		"$unchecked_locked_texture": "textures/ui/toggle_off_disabled",
+		"$checked_locked_texture": "textures/ui/toggle_on_disabled",
+		"$locked_alpha": 1.0
+	},
+	
+
+
+
+
+
+
+
+	"namespace": "common_tabs",
+	"pocket_tab_help_button": {
+		"modifications": [
+			{
+				"control_name": "help_button",
+				"operation": "remove"
+			}
+		]
+	},
+	"pocket_tab_close_and_help_button": {
+		"size": [
+			"100%",
+			34
+		],
+		"modifications": [
+			{
+				"control_name": "help_button",
+				"operation": "remove"
+			}
+		]
+	},
+	"tab_close_and_help_button": {
+		"modifications": [
+			{
+				"control_name": "help_button",
+				"operation": "remove"
+			}
+		]
+	}
+}

@@ -61,6 +61,11 @@
             "memory_tier": 1
         },
         {
+            "folder_name": "oreui",
+            "name": "\n\n§aO§fR§aE §fU§aI§r - change theme to ore ui",
+            "memory_tier": 1
+        },
+        {
             "folder_name": "clean",
             "name": "\n\n§enothing changes here it just a normal packs",
             "memory_tier": 1

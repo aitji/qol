@@ -1,0 +1,23 @@
+{
+	"format_version": "1.14.0",
+	"cakeui.button_press": {
+		"category": "ui",
+		"sounds": ["sounds/ui/button_press"]
+	},
+	"sound_definitions": {
+	  "cakeui.button_press": {
+	  	"category": "ui",
+	  	"sounds": ["sounds/ui/button_press"]
+	  },
+	  "acr.destroy_item": {
+		"category": "ui",
+		"sounds": [
+		  {
+			"name": "sounds/destroy_item",
+			"volume": 1,
+			"load_on_low_memory": true
+		  }
+		]
+	  }
+	}
+}

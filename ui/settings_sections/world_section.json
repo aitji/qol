@@ -9,5 +9,12 @@
           }
         }
       ]
-    }
+  },
+    
+  "selector_stack_panel/controls_and_settings_selector_pane/language_button": {
+    "ignored": false
+  },
+  "section_content_panels/general_and_controls_sections/language_section": {
+    "ignored": false
   }
+}

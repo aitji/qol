@@ -1,9 +1,16 @@
 map.position=§c» §f%s§c, §f%s§c, §f%s §c«
 hudScreen.daysPlayed=§c» §fDays§c: %s
-permissions.chatmute=§fYou has been §cmuted§f, You can't type until some §cAdmin§f un-muted you
-progressScreen.message.locating=Downloading §c@aitji§f textures pack...
-progressScreen.message.resourceLoading=Loading §c@aitji§f terrain
-progressScreen.loading=Login as §c@aitji§f...
+permissions.chatmute=§7sorry you cannot talk rn.§c brb
+progressScreen.message.locating=Downloading §c@aitji§f...
+progressScreen.message.resourceLoading=Downloading §c@aitji§f textures pack...
+progressScreen.loading=Login with §c@aitji§f...
+
+multiplayer.player.joined=§r§f<%s> joined the game
+multiplayer.player.joined.renamed=§r§f<%s> joined the game
+multiplayer.player.joined.realms=§r§f<%s> joined the Realm
+multiplayer.player.joined.realms.renamed=§r§f<%s> joined the Realm
+multiplayer.player.left=§r§f<%s> left the game
+multiplayer.player.left.realms=§r§f<%s> left the Realm
 
 item.itemLock.cantDrop=§8Can't drop
 item.itemLock.cantMove=§8Can't move

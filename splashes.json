@@ -1,0 +1,58 @@
+{
+  "splashes": [
+    "Use === instead of ==!",
+    "Minify your code!",
+    "Avoid memory leaks!",
+    "Use requestAnimationFrame!",
+    "Debounce your events!",
+    "Lazy load images!",
+    "Cache DOM lookups!",
+    "Use web workers for heavy tasks!",
+    "Optimize loops!",
+    "Use async/await wisely!",
+    "Reduce reflows and repaints!",
+    "Bundle and compress your assets!",
+    "Keep your dependencies lean!",
+    "Use passive event listeners!",
+    "Defer non-critical scripts!",
+    "Profile your code performance!",
+    "Enable gzip or Brotli compression!",
+    "Keep your call stack shallow!",
+    "Reduce third-party scripts!",
+    "Use service workers for caching!",
+    "Keep JavaScript execution fast!",
+    "Use the right data structures!",
+    "Compress JSON responses!",
+    "Don't block the main thread!",
+    "Use IndexedDB for large data!",
+    "Avoid unnecessary re-renders!",
+    "Use CSS for animations!",
+    "Preload important resources!",
+    "Throttle scroll events!",
+    "Avoid inline JavaScript!",
+    "Reduce unused variables!",
+    "Optimize recursive functions!",
+    "Use event delegation!",
+    "Reduce garbage collection pressure!",
+    "Use function hoisting effectively!",
+    "Split long tasks with setTimeout!",
+    "Leverage HTTP/2 for performance!",
+    "Use intersection observer!",
+    "Avoid using eval()!",
+    "Batch DOM updates!"
+  ],
+  "conditional": [
+    {
+      "requires": {
+        "trialMode": true
+      },
+      "splashes": [
+        "Try JavaScript optimizations!",
+        "Test your code in trial mode!",
+        "Experiment with new features!",
+        "Refactor and improve performance!",
+        "Optimize before deploying!"
+      ]
+    }
+  ]
+}

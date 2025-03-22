@@ -78,7 +78,8 @@
         "Tip: Use 'JSON.stringify()' with a space argument to pretty-print the output!",
         "JS tip: Use 'JSON.stringify()' with a replacer function to customize the serialization process!",
         "Did you know? JSON can represent strings, numbers, booleans, arrays, and objects!",
-        "Pro tip: Use 'JSON.parse()' with a reviver function to customize the parsing process!"
+        "Pro tip: Use 'JSON.parse()' with a reviver function to customize the parsing process!",
+        "JS is a dynamic language - from data manipulation to DOM manipulation, it's versatile!"
     ],
     "editor_loading_messages": [
         "tips.game.28",

@@ -61,6 +61,11 @@
             "memory_tier": 1
         },
         {
+            "folder_name": "unarm",
+            "name": "\n\n§munarm§r - remove armor textures & armor trim too\n§4* FLY! still have texture tho!",
+            "memory_tier": 1
+        },
+        {
             "folder_name": "untextures",
             "name": "\n\n§muntextures§r - remove this pack textures\n§4* on this mode put this pack below.",
             "memory_tier": 1

@@ -16,28 +16,8 @@
     ],
     "subpacks": [
         {
-            "folder_name": "old",
-            "name": "\n\n§6oldest§r - taking a textures/sounds back to the past",
-            "memory_tier": 1
-        },
-        {
-            "folder_name": "funny",
-            "name": "\n\n§dfunny§r - make a vibes sound more meme",
-            "memory_tier": 1
-        },
-        {
             "folder_name": "hitbox",
             "name": "\n\n§ehitbox§r - display a players hitbox thought the wall, work on multiplayer too",
-            "memory_tier": 1
-        },
-        {
-            "folder_name": "inv",
-            "name": "\n\n§binventory§r - show a inventory on hud",
-            "memory_tier": 1
-        },
-        {
-            "folder_name": "creative",
-            "name": "\n\n§adebug§r - debug mode for sure",
             "memory_tier": 1
         },
         {
@@ -45,11 +25,6 @@
             "name": "\n\n§6entity cheat§r - be fair or back home, see a entity thought wall, work on multiplayer too",
             "memory_tier": 1
         },
-        // {
-        //     "folder_name": "toast",
-        //     "name": "\n\n§9toast§r - toast hud screen (template)",
-        //     "memory_tier": 1
-        // },
         {
             "folder_name": "nether",
             "name": "\n\n§chell & maps§r - display more information of coordinate and show slime chunk mini maps",
@@ -58,11 +33,6 @@
         {
             "folder_name": "dark",
             "name": "\n\n§8dark§r - prefer playing at night times",
-            "memory_tier": 1
-        },
-        {
-            "folder_name": "unarm",
-            "name": "\n\n§munarm§r - remove armor textures & armor trim too\n§4* FLY! still have texture tho!",
             "memory_tier": 1
         },
         {

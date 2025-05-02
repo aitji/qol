@@ -5,6 +5,9 @@ progressScreen.message.locating=Downloading §c@aitji§f...
 progressScreen.message.resourceLoading=Downloading §c@aitji§f textures pack...
 progressScreen.loading=Login with §c@aitji§f...
 
+commands.locate.biome.success=The nearest %1$s is at block %2$s, %3$s, %4$s (%5 blocks away)
+commands.locate.structure.success=The nearest %1$s is at block %2$s, (y?), %3$s (%4 blocks away)
+
 multiplayer.player.joined=§r§f<%s> joined the game
 multiplayer.player.joined.renamed=§r§f<%s> joined the game
 multiplayer.player.joined.realms=§r§f<%s> joined the Realm

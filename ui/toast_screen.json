@@ -1,0 +1,77 @@
+{
+	"namespace": "toast_screen",
+	"toast_screen@common.base_screen": {
+		"always_accepts_input": true,
+		"send_telemetry": false,
+		"screen_not_flushable": true,
+		"render_game_behind": true,
+		"is_showing_menu": false,
+		"is_modal": true,
+		"low_frequency_rendering": true,
+		"should_steal_mouse": false,
+		"render_only_when_topmost": false,
+		"screen_draws_last": true,
+		"$screen_content": "toast_screen.toast_screen_content",
+		"$screen_animations": [],
+		"$use_loading_bars": false
+	},
+	"toast_screen_content": {
+		"type": "panel",
+		"clips_children": true,
+		"factory": {
+			"name": "toast_factory",
+			"control_ids": {
+				"popup": "popup@toast_screen.popup",
+				"chat_popup": "chat_popup@toast_screen.chat_popup",
+				"recipe_unlocked": "recipe_unlocked@toast_screen.recipe_unlocked_popup",
+				"recipe_unlocked_pocket": "recipe_unlocked_pocket@toast_screen.recipe_unlocked_pocket_popup",
+				"splitscreen_join_popup": "splitscreen_join_popup@toast_screen.splitscreen_join_popup",
+				"formfitting_alpha_toast": "toast_screen.formfitting_alpha_toast",
+				"snackbar": "snackbar@toast_screen.snackbar"
+			}
+		},
+		"controls": [
+			{
+				"cmd@common_toggles.light_text_toggle": {
+					"$button_text": "Logs",
+					"$toggle_name": "contentLog",
+					"$toggle_view_binding_name": "contentLog",
+					"anchor_to": "top_left",
+					"anchor_from": "top_left",
+					"offset": [ 25, 25 ],
+					"size": [ 60, 25 ],
+					"layer": 32767
+				}
+			},
+			{
+				"pi@common_toggles.light_text_toggle": {
+					"$button_text": "Perf",
+					"$toggle_name": "purtle",
+					"$toggle_view_binding_name": "purtle",
+					"anchor_to": "top_left",
+					"anchor_from": "top_left",
+					"offset": [ 25, 50 ],
+					"size": [ 60, 25 ],
+					"layer": 32767
+				}
+			},
+			{
+				"dev_console_error_logs@common_dialogs.main_panel_no_buttons": {
+					"$child_control": "content_log.content_scrolling_panel",
+					"size": [ "70%", "75%" ],
+					"offset": [ 0, 0 ],
+					"anchor_from": "top_right",
+					"anchor_to": "top_right",
+					"bindings": [
+						{
+							"binding_type": "view",
+							"source_control_name": "contentLog",
+							"source_property_name": "#toggle_state",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			}, { "perf_turtle_panel@perf_turtle.perf_turtle_panel": {} }
+		]
+	}
+}

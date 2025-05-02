@@ -1,10 +1,13 @@
-map.position=Position: %s, %s, %s
+map.position=Location: %s, %s, %s
 
 hudScreen.daysPlayed=§c| §fDays§c: %s
 permissions.chatmute=§fYou has been §cmuted§f, You can't type until some §cAdmin§f un-muted you
 progressScreen.message.locating=Downloading §c@aitji§f textures pack...
 progressScreen.message.resourceLoading=Loading §c@aitji§f terrain
 progressScreen.loading=Login as §c@aitji§f...
+
+commands.locate.biome.success=The nearest %1$s is at block %2$s, %3$s, %4$s (%5 blocks away)
+commands.locate.structure.success=The nearest %1$s is at block %2$s, (y?), %3$s (%4 blocks away)
 
 item.itemLock.cantDrop=§8Can't drop
 item.itemLock.cantMove=§8Can't move
@@ -145,11 +148,11 @@ enchantment.tridentImpaling=§e§i§d§T§I§G§r§f§7§dImpaling
 containerA.quickCraftButton=Double press to §l§ecraft all item§r
 containerA.quickTradeButton=Double press to §l§eTrade all item§r
 
-containerA.explanation.itemHiglighter.title=§l§f§bMewo Item Highlighter§r
+containerA.explanation.itemHiglighter.title=§l§f§bItem Highlighter§r
 containerA.explanation.itemHiglighter=§7press the search button or mewse the search bar §8(case sensitive)§7 to find and highlight the item§r
-containerA.explanation.containerItemMode.title=§l§f§bMewo Container Item Mode (!pc)§r
+containerA.explanation.containerItemMode.title=§l§f§bContainer Item Mode (!pc)§r
 containerA.explanation.containerItemMode=§7Hit the 'N' button to swap between autoplace mode and drop mode§r
-containerA.explanation.containerButton.title=§l§f§bMewo Container Button§r
+containerA.explanation.containerButton.title=§l§f§bContainer Button§r
 containerA.explanation.containerButton=§7Move or drop all the items, Switch to autoplace or drop mode to paw-cess§r
 
 containerA.itemHighlighter.searchBar=Search Item..

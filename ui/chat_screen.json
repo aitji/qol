@@ -248,7 +248,7 @@
 				  "property_bag": {
 					"#property_field": "#item_name",
 					"#y_is_zero_1": "~",
-					"#p1": "/teleport @s ",
+					"#p1": " /tp @s ",
 					"#toggle_state": 0
 				  },
 				  "localize": false,

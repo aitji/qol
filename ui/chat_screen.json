@@ -1,329 +1,99 @@
 {
 	"namespace": "chat",
 	"chat_screen_content": {
-	  "type": "panel",
-	  "controls": [
-		{ "messages_panel@chat.messages_scrolling_panel": {} },
-		{ "chat_bottom_panel@chat.chat_bottom_panel": { "layer": 2 } },
-		{ "chat_top_panel@chat.chat_header": { "layer": 2 } },
-		{ "autocomplete_commands_panel@chat.commands_panel": { "layer": 3 } },
-		{ "host_main_panel@host_options.host_panel": { "layer": 4 } },
-		{ "popup_factory@chat_settings.popup_factory": {} },
-		{ "aitji_chat_tweaks_ac_panel@aitji_chat_tweaks.aitji_chat_tweaks_ac_panel": {} }
-	  ]
+		"type": "panel",
+		"controls": [
+			{ "messages_panel@chat.messages_scrolling_panel": {} },
+			{ "chat_bottom_panel@chat.chat_bottom_panel": { "layer": 2 } },
+			{ "chat_top_panel@chat.chat_header": { "layer": 2 } },
+			{ "autocomplete_commands_panel@chat.commands_panel": { "layer": 3 } },
+			{ "host_main_panel@host_options.host_panel": { "layer": 4 } },
+			{ "popup_factory@chat_settings.popup_factory": {} }
+		],
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_back",
+				"value": {"aitji_chat_tweaks_ac_panel@aitji_chat_tweaks.aitji_chat_tweaks_ac_panel": {}}
+			}
+		]
 	},
 	"chat_background": {
-	  "type": "image",
-	  "size": ["100%", "100%"],
-	  "texture": "textures/ui/White",
-	  "color": [0.0, 0.0, 0.0],
-	  "alpha": 0.5
+		"type": "image",
+		"size": [ "100%", "100%" ],
+		"texture": "textures/ui/White",
+		"color": [ 0.0, 0.0, 0.0 ],
+		"alpha": 0.5
 	},
 	"chat_screen@common.base_screen": {
-	  "close_on_player_hurt": false,
-	  "$screen_content": "chat.chat_screen_content",
-	  "$screen_bg_content": "chat.chat_background",
-	  "button_mappings": [
-		{
-		  "from_button_id": "button.menu_exit",
-		  "to_button_id": "button.chat_menu_cancel",
-		  "mapping_type": "global"
-		},
-		{
-		  "from_button_id": "button.menu_cancel",
-		  "to_button_id": "button.chat_menu_cancel",
-		  "mapping_type": "global"
-		}
-	  ]
+		"close_on_player_hurt": false,
+		"$screen_content": "chat.chat_screen_content",
+		"$screen_bg_content": "chat.chat_background",
+		"button_mappings": [
+		  {
+			"from_button_id": "button.menu_exit",
+			"to_button_id": "button.chat_menu_cancel",
+			"mapping_type": "global"
+		  },
+		  {
+			"from_button_id": "button.menu_cancel",
+			"to_button_id": "button.chat_menu_cancel",
+			"mapping_type": "global"
+		  }
+		]
 	},
 	"messages_scrolling_panel@common.scrolling_panel": {
-	  "type": "panel",
-	  "size": ["100%-2px", "100%-50px"],
-	  "anchor_from": "bottom_left",
-	  "anchor_to": "bottom_left",
-	  "offset": [2, -27],
-	  "$scrolling_content": "chat.messages_stack_panel",
-	  "$scroll_size": [5, "100%-4px"],
-	  "$jump_to_bottom_on_update": false,
-	  "$show_background": false,
-	  "$always_handle_scrolling": true
+		"type": "panel",
+		"size": [ "100%-2px", "100%-50px" ],
+		"anchor_from": "bottom_left",
+		"anchor_to": "bottom_left",
+		"offset": [ 2, -27 ],
+		"$scrolling_content": "chat.messages_stack_panel",
+		"$scroll_size": [ 5, "100%-4px" ],
+		"$jump_to_bottom_on_update": false,
+		"$show_background": false,
+		"$always_handle_scrolling": true
 	},
 	"messages_stack_panel": {
-	  "type": "stack_panel",
-	  "orientation": "vertical",
-	  "$scrolling_content_anchor_from": "bottom_left",
-	  "$scrolling_content_anchor_to": "bottom_left",
-	  "factory": {
-		"name": "messages_factory",
-		"max_children_size": 100,
-		"control_ids": {
-		  "chat_screen_messages": "chat_screen_messages@chat.message_tts_wrapper"
+		"type": "stack_panel",
+		"orientation": "vertical",
+		"$scrolling_content_anchor_from": "bottom_left",
+		"$scrolling_content_anchor_to": "bottom_left",
+		"factory": {
+		  "name": "messages_factory",
+		  "max_children_size": 100,
+		  "control_ids": {
+			"chat_screen_messages": "chat_screen_messages@chat.message_tts_wrapper"
+		  }
 		}
-	  }
 	},
 	"message_tts_wrapper@common.tts_label_focus_wrapper": {
-	  "$tts_label_panel": "chat.messages_text",
-	  "$focus_border_visible_binding": "#host_options_menu_not_open_and_tts_enabled"
+		"$tts_label_panel": "chat.messages_text",
+		"$focus_border_visible_binding": "#host_options_menu_not_open_and_tts_enabled"
 	},
 	"messages_text": {
-	  "type": "image",
-	  "size": ["100%", "100%cm"],
-	  "texture": "textures/ui/Black",
-	  "anchor_from": "top_left",
-	  "anchor_to": "top_left",
-	  "alpha": 0,
-	  "bindings": [
-		{
-		  "binding_name": "#chat_visible",
-		  "binding_name_override": "#visible"
-		}
-	  ],
-	  "controls": [
-		{
-		  "messages_text": {
-			"type": "stack_panel",
-			"orientation": "horizontal",
-			"size": ["100%", "100%c"],
-			"offset": [2, 0],
-			"controls": [
-			  {
-				"text": {
-				  "type": "label",
-				  "color": "$chat_text_color",
-				  "localize": false,
-				  "size": ["100%", "default"],
-				  "layer": 2,
-				  "text": "#text",
-				  "text_tts": "#text_tts",
-				  "font_type": "$chat_font_type",
-				  "font_scale_factor": "$chat_font_scale_factor",
-				  "line_padding": "$chat_line_spacing"
-				}
-			  }
-			],
-			"bindings": [
-			  {
-				"binding_type": "view",
-				"source_property_name": "('§z' + #text)",
-				"target_property_name": "#f_text"
-			  },
-			  {
-				"binding_type": "view",
-				"source_property_name": "((#f_text - 'The nearest') = #f_text)",
-				"target_property_name": "#visible"
-			  }
-			]
+		"type": "panel",
+		"size": [ "100%", "100%c" ],
+		"controls": [
+		  {
+			"text": {
+			  "type": "label",
+			  "color": "$chat_text_color",
+			  "localize": false,
+			  "size": [ "100%", "default" ],
+			  "text": "#text",
+			  "text_tts": "#text_tts",
+			  "font_type": "$chat_font_type",
+			  "font_scale_factor": "$chat_font_scale_factor",
+			  "line_padding": "$chat_line_spacing"
+			}
 		  }
-		},
-		{
-		  "locate_text_label": {
-			"type": "label",
-			"text": "#locate_text",
-			"size": ["default", "default"],
-			"anchor_from": "top_left",
-			"anchor_to": "top_left",
-			"property_bag": {
-			  "#y_is_zero_1": "~"
-			},
-			"offset": [2, 0],
-			"layer": 2,
-			"bindings": [
-			  {
-				"binding_type": "view",
-				"source_property_name": "('§z' + #text)",
-				"target_property_name": "#f_text"
-			  },
-			  {
-				"binding_type": "view",
-				"source_property_name": "(not ((#f_text - 'The nearest') = #f_text))",
-				"target_property_name": "#visible"
-			  },
-			  {
-				"binding_type": "view",
-				"source_property_name": "(#f_text - 'The nearest ' - ' is at block ')",
-				"target_property_name": "#biome_and_coords"
-			  },
-			  {
-				"binding_type": "view",
-				"source_property_name": "(#f_text - 'The nearest ' - ' is at block ' - ' blocks away' - '(' - ')' - ',' - ' ' - '0' - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9' - '-' - 'y?')",
-				"target_property_name": "#biome"
-			  },
-			  {
-				"binding_type": "view",
-				"source_property_name": "(#biome_and_coords - #biome)",
-				"target_property_name": "#x"
-			  },
-			  {
-				"binding_type": "view",
-				"source_property_name": "(0 + (#biome_and_coords - (#biome + #x + ', ') - (#biome + #x + ', ' + '(y?)')))",
-				"target_property_name": "#y"
-			  },
-			  {
-				"binding_type": "view",
-				"source_property_name": "('#y_is_zero_' + ((#y < 1) * 1))",
-				"target_property_name": "#y_is_z"
-			  },
-			  {
-				"binding_type": "view",
-				"source_property_name": "(#y_is_z + #y - '0')",
-				"target_property_name": "#y_final"
-			  },
-			  {
-				"binding_type": "view",
-				"source_property_name": "(#biome_and_coords - (#biome + #x + ', ' + #y + ', ') - (#biome + #x + ', ' + '(y?)' + ', '))",
-				"target_property_name": "#z"
-			  },
-			  {
-				"binding_type": "view",
-				"source_property_name": "('The nearest minecraft:' + (#biome - 'minecraft:') + ' is at' +' §a[' + #x + ', ' + #y_final + ', ' + #z + ']')",
-				"target_property_name": "#locate_text"
-			  }
-			]
+		],
+		"bindings": [
+		  {
+			"binding_name": "#chat_visible",
+			"binding_name_override": "#visible"
 		  }
-		},
-		{
-		  "text_edit_box": {
-			"type": "edit_box",
-			"text_box_name": "#message_text_box",
-			"max_length": 2147483647,
-			"can_be_deselected": true,
-			"text_control": "text_control",
-			"always_listening": true,
-			"focus_enabled": false,
-			"hover_control": "hover",
-			"size": ["100%sm", "100%sm"],
-			"offset": [2, 0],
-			"layer": 2,
-			"anchor_from": "top_left",
-			"anchor_to": "top_left",
-			"selected": "#selected",
-			"button_mappings": [
-			  {
-				"from_button_id": "button.menu_select",
-				"to_button_id": "button.menu_select",
-				"handle_select": true,
-				"handle_deselect": false,
-				"mapping_type": "pressed"
-			  },
-			  {
-				"from_button_id": "button.menu_select",
-				"to_button_id": "button.menu_select",
-				"handle_select": false,
-				"handle_deselect": true,
-				"mapping_type": "global",
-				"consume_event": false
-			  },
-			  {
-				"from_button_id": "button.menu_cancel",
-				"to_button_id": "button.menu_select",
-				"handle_select": false,
-				"handle_deselect": true,
-				"mapping_type": "global"
-			  }
-			],
-			"bindings": [
-			  {
-				"binding_type": "view",
-				"source_property_name": "(#selected and not #selected)",
-				"target_property_name": "#selected"
-			  },
-			  {
-				"binding_type": "view",
-				"source_property_name": "('§z' + #text)",
-				"target_property_name": "#f_text"
-			  },
-			  {
-				"binding_type": "view",
-				"source_property_name": "(not ((#f_text - 'The nearest') = #f_text))",
-				"target_property_name": "#visible"
-			  }
-			],
-			"controls": [
-			  {
-				"text_control": {
-				  "type": "label",
-				  "layer": 9,
-				  "text": "#item_name",
-				  "visible": false,
-				  "property_bag": {
-					"#property_field": "#item_name",
-					"#y_is_zero_1": "~",
-					"#p1": " /tp @s ",
-					"#toggle_state": 0
-				  },
-				  "localize": false,
-				  "bindings": [
-					{
-					  "binding_type": "view",
-					  "source_property_name": "('§z' + #text)",
-					  "target_property_name": "#f_text"
-					},
-					{
-					  "binding_type": "view",
-					  "source_property_name": "(not ((#f_text - 'The nearest') = #f_text))",
-					  "target_property_name": "#toggle_state"
-					},
-					{
-					  "binding_type": "view",
-					  "source_property_name": "('#p'+(#toggle_state*1))",
-					  "binding_condition": "visibility_changed",
-					  "target_property_name": "#command"
-					},
-					{
-					  "binding_type": "view",
-					  "source_property_name": "(#f_text - 'The nearest ' - ' is at block ')",
-					  "target_property_name": "#biome_and_coords"
-					},
-					{
-					  "binding_type": "view",
-					  "source_property_name": "(#f_text - 'The nearest ' - '(y?)' - ' is at block ' - ' blocks away' - '(' - ')' - ',' - ' ' - '0' - '1' - '2' - '3' - '4' - '5' - '6' - '7' - '8' - '9' - '-' - 'y?')",
-					  "target_property_name": "#biome"
-					},
-					{
-					  "binding_type": "view",
-					  "source_property_name": "(#biome_and_coords - #biome)",
-					  "target_property_name": "#x"
-					},
-					{
-					  "binding_type": "view",
-					  "source_property_name": "(0 + (#biome_and_coords - (#biome + #x + ', ') - (#biome + #x + ', ' + '(y?)')))",
-					  "target_property_name": "#y"
-					},
-					{
-					  "binding_type": "view",
-					  "source_property_name": "('#y_is_zero_' + ((#y < 1) * 1))",
-					  "target_property_name": "#y_is_z"
-					},
-					{
-					  "binding_type": "view",
-					  "source_property_name": "(#y_is_z + #y - '0')",
-					  "target_property_name": "#y_final"
-					},
-					{
-					  "binding_type": "view",
-					  "source_property_name": "(#biome_and_coords - (#biome + #x + ', ' + #y + ', ') - (#biome + #x + ', ' + '(y?)' + ', '))",
-					  "target_property_name": "#z"
-					},
-					{
-					  "binding_type": "view",
-					  "source_property_name": "(#command + #x + ' ' + #y_final + ' ' + #z)",
-					  "target_property_name": "#item_name"
-					}
-				  ]
-				}
-			  },
-			  {
-				"hover@common.hover_text": {
-				  "layer": 29,
-				  "property_bag": {
-					"#hover_text": "Click to teleport"
-				  }
-				}
-			  }
-			]
-		  }
-		}
-	  ]
+		]
 	}
-  }
-  
+}

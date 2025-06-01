@@ -400,23 +400,3 @@ containerA.itemHighlighter.searchBar=Search Item..
 containerA.switcherHoverText.default=§a§lin §rNormal Mode
 containerA.switcherHoverText.autoplace=§a§lin §rAutoplace Mode
 containerA.switcherHoverText.drop=§a§lin §rDrop Mode
-
-
-
-
-item.black_bundle=§0§r§fBlack Bundle
-item.white_bundle=§f§r§fWhite Bundle
-item.red_bundle=§4§r§fRed Bundle
-item.orange_bundle=§6§r§fOrange Bundle
-item.yellow_bundle=§e§r§fYellow Bundle
-item.green_bundle=§a§r§fGreen Bundle
-item.lime_bundle=§a§a§r§fLime Bundle
-item.brown_bundle=§0§6§r§fBrown Bundle
-item.light_gray_bundle=§7§r§fLight Gray Bundle
-item.light_blue_bundle=§b§r§fLight Blue Bundle
-item.blue_bundle=§9§r§fBlue Bundle
-item.gray_bundle=§8§r§fGray Bundle
-item.pink_bundle=§c§r§fPink Bundle
-item.magenta_bundle=§d§r§fMagenta Bundle
-item.purple_bundle=§5§r§fPurple Bundle
-item.cyan_bundle=§9§b§r§fCyan Bundle

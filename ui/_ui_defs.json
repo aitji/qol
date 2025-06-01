@@ -11,9 +11,6 @@
         "ui/modules/brewing/icons.json",
 
         "ui/modules/container/item.json",
-        "ui/modules/container/item_data.json",
-
-        "ui/modules/bundle/template.json",
-        "ui/modules/bundle/type.json"
+        "ui/modules/container/item_data.json"
     ]
 }

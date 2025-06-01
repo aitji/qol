@@ -1,0 +1,71 @@
+{
+  "namespace": "template",
+  "bg_template": {
+    "type": "image",
+    "texture": "('textures/ui/.bundle_bg/'+$bg_index)",
+    "layer": 1,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "empty_button@common.button": {
+          "$pressed_button_name": "button.tapped_bundle_tooltip",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "default@common.empty_panel": {}
+            },
+            {
+              "hover@common.empty_panel": {}
+            },
+            {
+              "pressed@common.empty_panel": {}
+            }
+          ]
+        }
+      },
+      {
+        "selected_item_tooltip@common.item_panel_image": {
+          "alpha": 1,
+          "anchor_to": "bottom_middle",
+          "anchor_from": "top_middle",
+          "visible": "#visible",
+          "controls": [
+            {
+              "item_text_label@common.item_text_label": {
+                "alpha": 1,
+                "text": "#selected_bundle_item_text",
+                "bindings": [
+                  {
+                    "binding_name": "#selected_bundle_item_text",
+                    "binding_condition": "visible"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#bundle_has_selected_item",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#bundle_name"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not((#bundle_name-$codec)=#bundle_name))",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

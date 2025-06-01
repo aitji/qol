@@ -1,0 +1,26 @@
+{
+  "namespace": "t",
+  "p@achr": {
+    "type": "panel"
+  },
+  "i@achr": {
+    "type": "image"
+  },
+  "l@achr": {
+    "type": "label"
+  },
+  "vsp@achr": {
+    "type": "stack_panel",
+    "orientation": "vertical"
+  },
+  "hsp@achr": {
+    "type": "stack_panel",
+    "orientation": "horizontal"
+  },
+  "achr": {
+    "type": "none",
+    "anchor_from": "$ach",
+    "anchor_to": "$ach",
+    "$ach|default": "center"
+  }
+}

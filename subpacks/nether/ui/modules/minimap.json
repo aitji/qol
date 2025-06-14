@@ -43,7 +43,7 @@
         {
           "none": {
             "type": "label",
-            "text": "dimzChunkViewer.chunkPanel.none",
+            "text": "None",
             "layer": 1,
             "shadow": true,
             "bindings": [
@@ -76,7 +76,7 @@
         {
           "chunk_middle": {
             "type": "label",
-            "text": "dimzChunkViewer.chunkPanel.chunkMiddle",
+            "text": "Middle",
             "layer": 1,
             "shadow": true,
             "bindings": [
@@ -92,7 +92,7 @@
         {
           "chunk_edge": {
             "type": "label",
-            "text": "dimzChunkViewer.chunkPanel.chunkEdge",
+            "text": "Edge",
             "layer": 1,
             "shadow": true,
             "bindings": [
@@ -119,7 +119,7 @@
         {
           "chunk_corner": {
             "type": "label",
-            "text": "dimzChunkViewer.chunkPanel.chunkCorner",
+            "text": "Corner",
             "layer": 1,
             "shadow": true,
             "bindings": [

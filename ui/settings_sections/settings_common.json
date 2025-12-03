@@ -1,0 +1,14 @@
+{
+	"settings_content": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": [
+					{ "storage_management_screen_factory@storage_management_storage.storage_management_screen_factory": {} },
+					{ "storage_calc@storage_management_bindings.storage_calc": {} }
+				]
+			}
+		]
+	}
+}

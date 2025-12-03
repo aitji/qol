@@ -1,0 +1,322 @@
+{
+    "file_signature": "Itzriyo157",
+    "namespace": "storage_management_common",
+    "text_bindings": {
+        "$text|default": "walawe: ",
+        "$text_bindings_|default": [],
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [
+            "100%c",
+            "100%cm"
+        ],
+        "controls": [
+            {
+                "text": {
+                    "type": "label",
+                    "text": "$text",
+                    "size": [
+                        "default",
+                        10
+                    ]
+                }
+            },
+            {
+                "text_binding": {
+                    "type": "label",
+                    "text": "#text",
+                    "size": [
+                        "default",
+                        10
+                    ],
+                    "bindings": "$text_bindings_"
+                }
+            }
+        ]
+    },
+    "text_box_button_image": {
+        "type": "image",
+        "layer": 1,
+        "size": [
+            15,
+            15
+        ],
+        "texture": "$button_texture"
+    },
+    "clear_button_default_image@storage_management_common.text_box_button_image": {
+        "$button_texture": "textures/ui/close_button_default_light"
+    },
+    "clear_button_hover_image@storage_management_common.text_box_button_image": {
+        "$button_texture": "textures/ui/close_button_hover_light"
+    },
+    "text_box_swither_button_default_image@storage_management_common.text_box_button_image": {
+        "size": [
+            8,
+            8
+        ],
+        "$button_texture": "textures/ui/magnifying_glass"
+    },
+    "custom_text_edit_box@common.text_edit_box": {
+        "$use_clear_button|default": true,
+        "$show_magnifying_glass_icon|default": true,
+        "max_length": 24,
+        "$text_edit_box_label_size|default": [
+            "default",
+            10
+        ],
+        "$text_edit_box_label_offset|default": [
+            0,
+            0
+        ],
+        "$text_edit_box_label_offset": [
+            15,
+            0
+        ],
+        "controls": [
+            {
+                "centering_panel": {
+                    "type": "panel",
+                    "size": [
+                        "100% - 6px",
+                        "100% - 4px"
+                    ],
+                    "controls": [
+                        {
+                            "clipper_panel": {
+                                "type": "panel",
+                                "size": "$text_edit_clipping_panel_size",
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "offset": "$text_offset",
+                                "clips_children": true,
+                                "$disabled_color|default": "$color",
+                                "controls": [
+                                    {
+                                        "magnifying_glass@storage_management_common.text_box_swither_button_default_image": {
+                                            "ignored": "(not $use_clear_button or not $show_magnifying_glass_icon)",
+                                            "size": [
+                                                8,
+                                                8
+                                            ],
+                                            "offset": [
+                                                2,
+                                                0
+                                            ],
+                                            "anchor_from": "left_middle",
+                                            "anchor_to": "left_middle",
+                                            "layer": 2
+                                        }
+                                    },
+                                    {
+                                        "$text_edit_text_control@storage_management_common.custom_text_edit_box_label": {
+                                            "layer": 1,
+                                            "size": "$text_edit_box_label_size",
+                                            "offset": "$text_edit_box_label_offset",
+                                            "min_size": "$text_edit_box_label_min_size",
+                                            "anchor_from": "$text_edit_box_label_anchor_point",
+                                            "anchor_to": "$text_edit_box_label_anchor_point",
+                                            "font_size": "$font_size",
+                                            "$text_alpha|default": "$alpha",
+                                            "$locked_text_alpha|default": "$disabled_alpha",
+                                            "$locked_color|default": "$disabled_color"
+                                        }
+                                    },
+                                    {
+                                        "visibility_panel": {
+                                            "type": "panel",
+                                            "controls": [
+                                                {
+                                                    "place_holder_control@$place_holder_control": {
+                                                        "layer": 1,
+                                                        "size": "$text_edit_box_label_size",
+                                                        "offset": "$text_edit_box_label_offset",
+                                                        "min_size": "$text_edit_box_label_min_size",
+                                                        "anchor_from": "$text_edit_box_label_anchor_point",
+                                                        "anchor_to": "$text_edit_box_label_anchor_point",
+                                                        "$text_alpha|default": "$alpha",
+                                                        "$locked_text_alpha|default": "$disabled_alpha",
+                                                        "$locked_color|default": "$disabled_color"
+                                                    }
+                                                }
+                                            ],
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "$text_edit_text_control",
+                                                    "source_property_name": "(#item_name = '')",
+                                                    "target_property_name": "#visible",
+                                                    "resolve_sibling_scope": true
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "clear_text_box_panel": {
+                                            "type": "panel",
+                                            "ignored": "(not $use_clear_button)",
+                                            "visible": false,
+                                            "$clear_text_box_button_control|default": "storage_management_common.clear_text_box_button",
+                                            "controls": [
+                                                {
+                                                    "clear_text_box@$clear_text_box_button_control": {
+                                                        "size": [
+                                                            16,
+                                                            16
+                                                        ],
+                                                        "anchor_from": "right_middle",
+                                                        "anchor_to": "right_middle",
+                                                        "offset": [
+                                                            -1,
+                                                            0
+                                                        ],
+                                                        "layer": 2
+                                                    }
+                                                }
+                                            ],
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_control_name": "$text_edit_text_control",
+                                                    "source_property_name": "(not (#item_name = ''))",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "locked": {
+                    "type": "panel",
+                    "$disabled_color|default": "$color",
+                    "controls": [
+                        {
+                            "edit_box_indent@$text_background_default": {
+                                "$color": "$disabled_color",
+                                "$alpha": "$disabled_alpha"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "default@$text_background_default": {}
+            },
+            {
+                "hover@$text_background_hover": {}
+            },
+            {
+                "pressed@$text_background_hover": {}
+            }
+        ]
+    },
+    "clear_text_box_button": {
+        "$clear_text_box_button_name|default": "clear_search_items_text_box_button",
+        "type": "panel",
+        "controls": [
+            {
+                "$clear_text_box_button_name@common.toggle": {
+                    "$toggle_name": "('clear_' + $clear_text_box_button_name)",
+                    "$unchecked_control": "storage_management_common.clear_button_default_image",
+                    "$checked_control": "storage_management_common.clear_button_default_image",
+                    "$unchecked_hover_control": "storage_management_common.clear_button_hover_image",
+                    "$checked_hover_control": "storage_management_common.clear_button_hover_image",
+                    "$unchecked_locked_control": "common.empty_panel",
+                    "$checked_locked_control": "common.empty_panel",
+                    "$unchecked_locked_hover_control": "common.empty_panel",
+                    "$checked_locked_hover_control": "common.empty_panel"
+                }
+            }
+        ]
+    },
+    "custom_text_edit_box_label@common.text_edit_box_label": {
+        "$custom_text_edit_box_label_prop|default": {
+            "#property_field": "#item_name"
+        },
+        "property_bag": "$custom_text_edit_box_label_prop",
+        "bindings": "$custom_text_edit_box_label_bindings",
+        "$custom_text_edit_box_label_bindings|default": [
+            {
+                "binding_type": "$text_edit_box_content_binding_type",
+                "binding_condition": "$text_edit_box_binding_condition",
+                "binding_collection_name": "$text_edit_box_grid_collection_name",
+                "binding_name": "$text_edit_box_content_binding_name",
+                "binding_name_override": "#item_name"
+            },
+            {
+                "binding_type": "$text_color_binding_type",
+                "binding_name": "$text_color_binding_name",
+                "binding_name_override": "#color"
+            },
+            {
+                "binding_name": "#newline_refresh"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "$clear_text_box_button_name",
+                "source_property_name": "(#toggle_state - #toggle_state)",
+                "target_property_name": "#item_name"
+            }
+        ]
+    },
+    "raw_toggle": {
+        "type": "panel",
+        "$toggle_view_binding_name|default": "blabla",
+        "controls": [
+            {
+                "$toggle_view_binding_name@common.toggle": {
+                    "size": "$toggle_size",
+                    "button_mappings": "$button_mappings",
+                    "$unchecked_control|default": "common.empty_panel",
+                    "$checked_control|default": "common.empty_panel",
+                    "$unchecked_hover_control|default": "common.empty_panel",
+                    "$checked_hover_control|default": "common.empty_panel",
+                    "$unchecked_locked_control|default": "common.empty_panel",
+                    "$checked_locked_control|default": "common.empty_panel",
+                    "$unchecked_locked_hover_control|default": "common.empty_panel",
+                    "$checked_locked_hover_control|default": "common.empty_panel",
+                    "$toggle_size|default": [
+                        "100%",
+                        "100%"
+                    ],
+                    "$button_mappings|default": [
+                        {
+                            "from_button_id": "button.menu_select",
+                            "to_button_id": "button.menu_select",
+                            "mapping_type": "pressed"
+                        },
+                        {
+                            "from_button_id": "button.menu_ok",
+                            "to_button_id": "button.menu_ok",
+                            "mapping_type": "focused"
+                        },
+                        {
+                            "from_button_id": "button.controller_back",
+                            "to_button_id": "button.controller_back",
+                            "mapping_type": "focused",
+                            "ignored": "(not $allow_controller_back_button_mapping)"
+                        },
+                        {
+                            "ignored": "(not $enable_directional_toggling)",
+                            "from_button_id": "button.menu_left",
+                            "to_button_id": "$toggle_off_button",
+                            "mapping_type": "pressed",
+                            "input_mode_condition": "gamepad_and_not_gaze"
+                        },
+                        {
+                            "ignored": "(not $enable_directional_toggling)",
+                            "from_button_id": "button.menu_right",
+                            "to_button_id": "$toggle_on_button",
+                            "mapping_type": "pressed",
+                            "input_mode_condition": "gamepad_and_not_gaze"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

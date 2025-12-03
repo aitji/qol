@@ -5,6 +5,13 @@ progressScreen.message.locating=§c@aitji §fLoading...
 progressScreen.message.resourceLoading=§c@aitji §fDownloading server textures...
 progressScreen.loading=Login as §c@aitji§f...
 
+storage_management.worldLocation=World Location:
+storage_management.cachesStorageLocation=Caches & Storage Location
+storage_management.selectAllInvert=Select All/Invert Selection
+storage_management.showMoreInfo=Show More Information
+storage_management.sizeTotal=Estimated total size: 
+storage_management.storage.openScreen=Open Storage Management Screen
+
 commands.locate.biome.success=The nearest %1$s is at block %2$s, %3$s, %4$s (%5 blocks away)
 commands.locate.structure.success=The nearest %1$s is at block %2$s, (y?), %3$s (%4 blocks away)
 

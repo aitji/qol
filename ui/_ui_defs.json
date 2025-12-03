@@ -1,5 +1,9 @@
 {
     "ui_defs": [
-        "ui/modules/durability.json"
+        "ui/modules/durability.json",
+
+        "ui/storage_management/storage_management.json",
+		"ui/storage_management/bindings.json",
+		"ui/storage_management/ui.json"
     ]
 }

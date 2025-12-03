@@ -64,5 +64,16 @@
     "$screen_animations": [],
     "$background_animations": []
   },
-  "gui_hotbar_slot_button_prototype": {"focus_enabled": false}
+  "gui_hotbar_slot_button_prototype": {"focus_enabled": false},
+
+  // bundle item count in hotbar
+  "gui_hotbar_grid_item/hotbar_parent": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "item_count_bundle@ryBIC:item_counter.bundle_item_counter_text": { "$item_collection_name": "$hotbar_collection_name" } }
+      }
+    ]
+  }
 }

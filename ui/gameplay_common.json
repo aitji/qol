@@ -1,0 +1,21 @@
+{
+    "bundle_selected_item_panel": {
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": {
+                    "item_count_bundle@ryBIC:item_counter.bundle_item_counter_text": {
+                        "offset": [
+                            2,
+                            3
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "bundle_selected_item_panel/storage_bar": {
+        "ignored": true
+    }
+}

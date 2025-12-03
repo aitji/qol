@@ -1,3 +1,21 @@
 {
-  "selected_item_details_factory": { "ignored": true }
+  "selected_item_details_factory": {
+    "ignored": true
+  },
+
+  // bundle
+  "container_item": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "item_count_bundle@ryBIC:item_counter.bundle_item_counter_text": {}
+        }
+      }
+    ]
+  },
+  "container_item/item_cell/storage_bar": {
+    "ignored": true
+  }
 }

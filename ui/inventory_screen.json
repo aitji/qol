@@ -284,29 +284,6 @@
             }
         ]
     },
-    "crafting_arrow": {
-        "controls": [
-            {
-                "quick_craft_button@aitji_quick_crafting.quick_craft_button": {}
-            }
-        ]
-    },
-    "crafting_arrow_large": {
-        "controls": [
-            {
-                "quick_craft_button@aitji_quick_crafting.quick_craft_button": {
-                    "size": [
-                        26,
-                        26
-                    ],
-                    "offset": [
-                        4,
-                        5
-                    ]
-                }
-            }
-        ]
-    },
     "toolbar_panel/toolbar_background/toolbar_stack_panel/help_button_panel": {
         "modifications": [
             {
@@ -318,131 +295,9 @@
     "inventory_container_item/item_cell/item": {
     "$renderer_binding_name": "#hover_text",
     "$renderer_binding_type": "collection",
-    "$renderer_binding_collection_name": "$item_collection_name",
-    "controls": [
-      {
-        "stack_count_label@common.stack_count_label": { "layer": 27 }
-      },
-      {
-        "normal_item_renderer": {
-          "type": "panel",
-          "controls": [
-            {
-              "item_renderer@$item_renderer": {
-                "size": "$item_renderer_size",
-                "anchor_to": "center",
-                "anchor_from": "center",
-                "offset": "$item_renderer_offset",
-                "layer": 7
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "$renderer_binding_name",
-              "binding_name_override": "#item_name",
-              "binding_type": "$renderer_binding_type",
-              "binding_collection_name": "$renderer_binding_collection_name"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(((#item_name - '§d§i§m§z§e§b§r§f') = #item_name) = 0)",
-              "target_property_name": "#is_enchanted_book"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(((#item_name - '§e§i§d') = #item_name) = 0)",
-              "target_property_name": "#has_properties"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "((#is_enchanted_book * #has_properties) = 0)",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "enchanted_book_renderer": {
-          "type": "panel",
-          "controls": [
-            {
-              "item_renderer@item_renderer_ds-beb.enchanted_book_renderer": {
-                "size": "$item_renderer_size",
-                "anchor_to": "center",
-                "anchor_from": "center",
-                "offset": "$item_renderer_offset",
-                "layer": 7
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_control_name": "normal_item_renderer",
-              "source_property_name": "(not #visible)",
-              "target_property_name": "#visible",
-              "resolve_sibling_scope": true
-            }
-          ]
-        }
-      }
-    ]
+    "$renderer_binding_collection_name": "$item_collection_name"
   },
   "grid_item_for_inventory": {
     "$use_item_highlighter": true
-  },
-  
-  "recipe_inventory_screen_content_pocket": {
-    "$use_container_item_mode": true,
-    "$use_item_highlighter": true,
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": [
-          {
-            "container_item_mode_details_panel@container_item_ds-acr.container_item_mode_details_panel": {
-              "layer": 50
-            }
-          },
-          {
-            "container_item_data@container_item_data_ds-acr.total_data": {}
-          }
-        ]
-      }
-    ]
-  },
-  
-  "survival_panel_pocket": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": {
-          "container_control_panel@container_item_ds-acr.container_control_panel_pocket": {
-            "anchor_from": "left_middle",
-            "anchor_to": "left_middle",
-            "offset": [5,0]
-          }
-        }
-      }
-    ]
-  },
-
-  "survival_panel_crafting_pocket": {
-    "modifications": [
-      {
-        "array_name": "controls",
-        "operation": "insert_front",
-        "value": {
-          "container_control_panel@container_item_ds-acr.container_control_panel_pocket": {
-            "anchor_from": "left_middle",
-            "anchor_to": "left_middle",
-            "offset": [5,0]
-          }
-        }
-      }
-    ]
   }
 }

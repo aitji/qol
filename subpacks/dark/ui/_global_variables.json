@@ -334,11 +334,5 @@
   "$dressing_room_skin_picker_equipped_border_color": [ 0.063, 0.631, 0.004 ],
   "$dressing_room_skin_picker_dark_bg_color": [ 0.55, 0.55, 0.55 ],
 
-  "$realmsplus_exclamation_mark_color": [ 1, 1, 1 ],
-  "$dimz_beb_enchanted_book_name": "Enchanted Book",
-  "$dimz_beb_tab_item_name": "Items",
-  "$suspicious_stew_id": 625,
-
-  "$aitj_acr_force_autoplace_mode": false,
-  "$aitj_acr_use_tooltip_button": true
+  "$realmsplus_exclamation_mark_color": [ 1, 1, 1 ]
 }

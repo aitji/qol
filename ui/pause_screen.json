@@ -1,0 +1,24 @@
+{
+	"namespace": "pause",
+	"store_button@pause.pause_button_template": {
+		"$pressed_button_name": "button.menu_settings",
+		"$button_text": "menu.settings"
+	},
+	"settings_button_small@common_buttons.light_content_button": {
+		"$pressed_button_name": "button.menu_store",
+		"$focus_id": "icon_panel_main_focus",
+		"focus_change_down": "return_to_game",
+		"$button_tts_header": "menu.settings",
+		"size": [ 24, 24 ],
+		"$button_content": "pause.settings_icon",
+		"$pressed_alpha": 0.65,
+		"bindings": [
+			{
+				"binding_name": "#store_button_visible",
+				"binding_name_override": "#enabled",
+				"binding_type": "global"
+			}
+		]
+	},
+	"settings_icon": { "texture": "textures/ui/store_home_icon" }
+}

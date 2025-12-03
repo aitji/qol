@@ -10,39 +10,19 @@
     "modules": [
         {
             "type": "resources",
-            "uuid": "7c4e3966-39da-11ee-be56-0242ac120002",
+            "uuid": "713986fb-4e17-4fe8-a50b-3b8d40525d43",
             "version": [1,0,0]
         }
     ],
     "subpacks": [
-        {
-            "folder_name": "hitbox",
-            "name": "\n\n§ehitbox§r - display a players hitbox thought the wall, work on multiplayer too",
-            "memory_tier": 1
-        },
-        {
-            "folder_name": "cheat",
-            "name": "\n\n§6entity cheat§r - be fair or back home, see a entity thought wall, work on multiplayer too",
-            "memory_tier": 1
-        },
-        {
-            "folder_name": "nether",
-            "name": "\n\n§chell & maps§r - display more information of coordinate and show slime chunk mini maps",
-            "memory_tier": 1
-        },
         {
             "folder_name": "dark",
             "name": "\n\n§8dark§r - prefer playing at night times",
             "memory_tier": 1
         },
         {
-            "folder_name": "untextures",
-            "name": "\n\n§muntextures§r - remove this pack textures\n§4* on this mode put this pack below.",
-            "memory_tier": 1
-        },
-        {
             "folder_name": "clean",
-            "name": "\n\n§enothing changes here it just a normal packs",
+            "name": "\n\nnothing changes here it just a normal packs",
             "memory_tier": 1
         }
     ]

@@ -1,11 +1,11 @@
 {
     "format_version": 2,
     "header": {
-        "name": "§c@aitji's §fQ§eo§fF §c(1.1.0)",
+        "name": "§c@aitji's §fQ§eo§fF §c(1.1.1)",
         "description": "§7This is a custom pack for personal use!\n§7it collection of various packs. with hardly combining them together. e.g., json ui textures and stuff.",
         "uuid": "713986fb-4e17-4fe8-a50b-3b8d40525d44",
-        "version": [1,1,0],
-        "min_engine_version": [1,17,0]
+        "version": [1,1,1],
+        "min_engine_version": [1,21,0]
     },
     "modules": [
         {

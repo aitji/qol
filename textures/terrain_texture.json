@@ -2858,6 +2858,7 @@
                 "textures/blocks/hopper_top"
             ]
         },
+        "hopper_inside": { "textures": "textures/blocks/hopper_inside" },
         "hopper_outside_east": {
             "textures": [
                 "textures/blocks/hopper_outside",

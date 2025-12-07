@@ -1,15 +1,167 @@
 {
-  "format_version": "1.14.0",
-  "sound_definitions": {
-    "acr.destroy_item": {
-      "category": "ui",
-      "sounds": [
-        {
-          "name": "sounds/destroy_item",
-          "volume": 1,
-          "load_on_low_memory": true
-        }
-      ]
-    }
+  "acr.destroy_item": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/destroy_item",
+        "volume": 1,
+        "load_on_low_memory": true
+      }
+    ]
+  },
+
+  // monotone note block sounds
+  "note.banjo": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/banjo",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.bass": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/bass",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.bassattack": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/bassattack",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.bd": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/bd",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.bell": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/bell",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.bit": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/bit",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.cow_bell": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/cow_bell",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.didgeridoo": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/didgeridoo",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.flute": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/flute",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.guitar": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/guitar",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.harp": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/harp",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.hat": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/hat",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.chime": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/icechime",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.iron_xylophone": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/iron_xylophone",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.pling": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/pling",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.snare": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/snare",
+        "load_on_low_memory": true
+      }
+    ]
+  },
+  "note.xylophone": {
+    "category": "ui",
+    "sounds": [
+      {
+        "name": "sounds/note/xylobone",
+        "load_on_low_memory": true
+      }
+    ]
   }
 }

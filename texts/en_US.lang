@@ -12,15 +12,12 @@ storage_management.showMoreInfo=Show More Information
 storage_management.sizeTotal=Estimated total size: 
 storage_management.storage.openScreen=Open Storage Management Screen
 
-commands.locate.biome.success=The nearest %1$s is at block %2$s, %3$s, %4$s (%5 blocks away)
-commands.locate.structure.success=The nearest %1$s is at block %2$s, (y?), %3$s (%4 blocks away)
-
-multiplayer.player.joined=§r§f<%s> joined the game
-multiplayer.player.joined.renamed=§r§f<%s> joined the game
-multiplayer.player.joined.realms=§r§f<%s> joined the Realm
-multiplayer.player.joined.realms.renamed=§r§f<%s> joined the Realm
-multiplayer.player.left=§r§f<%s> left the game
-multiplayer.player.left.realms=§r§f<%s> left the Realm
+multiplayer.player.joined=§r§7<%s> joined the game
+multiplayer.player.joined.renamed=§r§7<%s> joined the game
+multiplayer.player.joined.realms=§r§7<%s> joined the Realm
+multiplayer.player.joined.realms.renamed=§r§7<%s> joined the Realm
+multiplayer.player.left=§r§7<%s> left the game
+multiplayer.player.left.realms=§r§7<%s> left the Realm
 
 item.itemLock.cantDrop=§8Can't drop
 item.itemLock.cantMove=§8Can't move
@@ -39,9 +36,9 @@ enchantment.level.4=§a4
 enchantment.level.5=§c5
 enchantment.level.6=§46
 enchantment.level.7=§m7
-enchantment.level.8=§fIIx.com
-enchantment.level.9=§fIx.com
-enchantment.level.10=§fx.com
+enchantment.level.8=§m8
+enchantment.level.9=§m9
+enchantment.level.10=§m10
 
 menu.returnToMenu=§4Disconnect
 menu.quit=§4Disconnect
@@ -67,68 +64,3 @@ item.record_creator.desc=Lena Raine - Creator §c12
 item.record_creator_music_box.desc=Lena Raine - Creator (Music Box) §c11
 item.record_precipice.desc=Aaron Cherof - Precipice §c13
 item.record_5.desc=Samuel Åberg - 5 §c15
-
-aitji.bg.splash.potion=Splash Potion
-aitji.bg.lingering.potion=Lingering Potion
-aitji.bg.extended.potion=Extended Potion
-aitji.bg.level_2.potion=Level 2 Potion
-aitji.bg.effect.potion=Potion Effect
-
-item.enchanted_book.name=Enchanted Book§d§i§m§z§e§b§r§f
-enchantment.arrowDamage=§e§i§d§A§D§E§r§f§bPower
-enchantment.arrowFire=§e§i§d§A§F§E§r§f§7Flame
-enchantment.arrowInfinite=§e§i§d§A§I§E§r§f§7Infinity
-enchantment.arrowKnockback=§e§i§d§A§K§B§r§f§7§ePunch
-enchantment.crossbowMultishot=§e§i§d§C§M§T§r§f§7§bMultishot
-enchantment.crossbowPiercing=§e§i§d§C§P§G§r§f§7Piercing
-enchantment.crossbowQuickCharge=§e§i§d§C§Q§C§r§f§7§dQuick Charge
-enchantment.curse.binding=§e§i§d§C§B§G§r§f§7§cC§f§cu§fr§cs§fe §co§ff §cB§fi§cn§fd§ci§fn§cg
-enchantment.curse.vanishing=§e§i§d§C§V§G§r§f§7§cC§fu§cr§fs§ce §fo§cf §fV§ca§fn§ci§fs§ch§fi§cn§fg
-enchantment.damage.all=§e§i§d§D§A§L§r§f§7§bSharpness
-enchantment.damage.arthropods=§e§i§d§D§A§S§r§f§7Bane of Arthropods
-enchantment.damage.undead=§e§i§d§D§U§D§r§f§7Smite
-enchantment.digging=§e§i§d§D§G§G§r§f§7§dEfficiency
-enchantment.durability=§e§i§d§D§B§Y§r§f§7§bUnbreaking
-enchantment.fire=§e§i§d§F§R§E§r§f§7§eFire Aspect
-enchantment.fishingSpeed=§e§i§d§F§S§D§r§f§7§dLure
-enchantment.frostwalker=§e§i§d§F§W§R§r§f§7§dF§br§9o§qs§at §eW§ga§6l§vk§ce§4r
-enchantment.heavy_weapon.breach=§e§i§d§H§W§B§r§f§7§dBreach
-enchantment.heavy_weapon.density=§e§i§d§H§W§D§r§f§7§dDensity
-enchantment.heavy_weapon.windburst=§e§i§d§H§W§W§r§f§7§dW§bi§9n§ad §eB§gu§6r§vs§ct
-enchantment.knockback=§e§i§d§K§B§K§r§f§7§eKnockback
-enchantment.lootBonus=§e§i§d§L§B§S§r§f§7§dL§bo§9o§at§ei§6n§cg
-enchantment.lootBonusDigger=§e§i§d§L§B§D§r§f§7§dF§bo§9r§at§eu§6n§ce
-enchantment.lootBonusFishing=§e§i§d§L§B§F§r§f§7§dL§bu§9c§qk §ao§ef §gt§6h§ve §cS§4e§ma
-enchantment.mending=§e§i§d§M§D§G§r§f§7§dM§be§9n§ad§ei§6n§cg
-enchantment.oxygen=§e§i§d§O§Y§N§r§f§7§dRespiration
-enchantment.protect.all=§e§i§d§P§A§L§r§f§7§dProtection
-enchantment.protect.explosion=§e§i§d§B§A§N§r§f§7§eBlast Protection
-enchantment.protect.fall=§e§i§d§P§F§L§r§f§7§dF§3e§sa§bt§9h§qe§ar §eF§ga§6l§vl§ci§4n§mg
-enchantment.protect.fire=§e§i§d§P§F§E§r§f§7Fire Protection
-enchantment.protect.projectile=§e§i§d§P§P§E§r§f§7Projectile Protection
-enchantment.soul_speed=§e§i§d§S§S§D§r§f§7§bSoul Speed
-enchantment.swift_sneak=§e§i§d§S§S§K§r§f§7§bSwift Sneak
-enchantment.thorns=§e§i§d§T§R§S§r§f§7§eThorns
-enchantment.untouching=§e§i§d§U§H§G§r§f§7§dSilk Touch
-enchantment.waterWalker=§e§i§d§D§S§R§r§f§7§b Depth Strider
-enchantment.waterWorker=§e§i§d§W§W§R§r§f§7§bAqua Affinity
-enchantment.tridentChanneling=§e§i§d§T§C§G§r§f§7Channeling
-enchantment.tridentLoyalty=§e§i§d§T§L§Y§r§f§7§eLoyalty
-enchantment.tridentRiptide=§e§i§d§T§R§E§r§f§7§dR§bi§9p§at§ei§6d§ce
-enchantment.tridentImpaling=§e§i§d§T§I§G§r§f§7§dImpaling
-
-containerA.quickCraftButton=Double press to §l§ecraft all item§r
-containerA.quickTradeButton=Double press to §l§eTrade all item§r
-
-containerA.explanation.itemHiglighter.title=§l§f§bMewo Item Highlighter§r
-containerA.explanation.itemHiglighter=§7press the search button or mewse the search bar §8(case sensitive)§7 to find and highlight the item§r
-containerA.explanation.containerItemMode.title=§l§f§bMewo Container Item Mode (!pc)§r
-containerA.explanation.containerItemMode=§7Hit the 'N' button to swap between autoplace mode and drop mode§r
-containerA.explanation.containerButton.title=§l§f§bMewo Container Button§r
-containerA.explanation.containerButton=§7Move or drop all the items, Switch to autoplace or drop mode to paw-cess§r
-
-containerA.itemHighlighter.searchBar=Search Item..
-
-containerA.switcherHoverText.default=§a§lin §rNormal Mode
-containerA.switcherHoverText.autoplace=§a§lin §rAutoplace Mode
-containerA.switcherHoverText.drop=§a§lin §rDrop Mode

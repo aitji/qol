@@ -1,7 +1,8 @@
-hi, this is **version history** of **personal usaged** qol resources pack, what i do is just put a lot of resources pack into this one, which still kept vanila feel (sort of)
+hi, this is the **version history** for my **personal-use** QoL resource pack.  
+i basically combined multiple resource packs into one while keeping a mostly vanilla feel.
 
 ## credits
-it might little hard to credit afterwards, sorry if some work didn't get credit
+crediting everything later may be difficult, so apologies in advance if anything is missing.
 
 - Itzriyo157
   - [Déesse Storage Management](https://mcpedl.com/deesses-storage-management)
@@ -9,7 +10,7 @@ it might little hard to credit afterwards, sorry if some work didn't get credit
   - [Paddings Remover](https://mcpedl.com/paddings-remover)
 
 - DimzCraft
-  - [Durability Tools Viewer](https://modbay.org/textures/1885-durability-tools-viewer.html) `i removed some part to kept it simple`
+  - [Durability Tools Viewer](https://modbay.org/textures/1885-durability-tools-viewer.html) — _some parts were removed to keep it simple_
 
 - Drav (Bedrock Tweaks)
-  - really a lot of textures and json from [bt](https://bedrocktweaks.net/resource-packs)
+  - various textures and json files from [Bedrock Tweaks](https://bedrocktweaks.net/resource-packs)

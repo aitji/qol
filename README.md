@@ -14,3 +14,6 @@ crediting everything later may be difficult, so apologies in advance if anything
 
 - Drav (Bedrock Tweaks)
   - various textures and json files from [Bedrock Tweaks](https://bedrocktweaks.net/resource-packs)
+
+- PickerTH 12
+  - textures blocky health and saturation

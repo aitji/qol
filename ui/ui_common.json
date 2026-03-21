@@ -2,6 +2,20 @@
   "selected_item_details_factory": {
     "ignored": true
   },
+  
+  "highlight_slot_panel/highlight": {
+    "modifications": [
+      {
+        "control_name": "hover_text",
+        "operation": "remove"
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": { "hover_text_new@common_ds-dtv.hover_text": {} }
+      }
+    ]
+  },
 
   // bundle
   "container_item": {

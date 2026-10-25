@@ -1,5 +1,39 @@
 {
     "format_version": [1,1,0],
+    "glass": {
+        "textures": "glass",
+        "sound": "glass",
+        "carried_textures": "glass_carried"
+    },
+    "glass_pane": {
+        "textures": {
+            "up": "glass_carried",
+            "down": "glass_carried",
+            "north": "glass_carried",
+            "south": "glass_carried",
+            "west": "glass_carried",
+            "east": "glass_pane_top"
+        },
+        "sound": "glass",
+        "carried_textures": "glass_carried"
+    },
+    "stained_glass": {
+        "textures": "stained_glass",
+        "sound": "glass",
+        "carried_textures": "stained_glass_carried"
+    },
+    "stained_glass_pane": {
+        "textures": {
+            "up": "stained_glass_carried",
+            "down": "stained_glass_carried",
+            "north": "stained_glass_carried",
+            "south": "stained_glass_carried",
+            "west": "stained_glass_carried",
+            "east": "stained_glass_pane_top"
+        },
+        "sound": "glass",
+        "carried_textures": "stained_glass_carried"
+    },
     "hopper": {
         "sound": "metal",
         "textures": {

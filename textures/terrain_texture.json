@@ -4,6 +4,30 @@
     "padding": 8,
     "num_mip_levels": 4,
     "texture_data": {
+        "glass_carried": {
+            "textures": "textures/blocks/carried/glass"
+        },
+        "stained_glass_carried": {
+            "textures": [
+                "textures/blocks/carried/glass_white",
+                "textures/blocks/carried/glass_orange",
+                "textures/blocks/carried/glass_magenta",
+                "textures/blocks/carried/glass_light_blue",
+                "textures/blocks/carried/glass_yellow",
+                "textures/blocks/carried/glass_lime",
+                "textures/blocks/carried/glass_pink",
+                "textures/blocks/carried/glass_gray",
+                "textures/blocks/carried/glass_silver",
+                "textures/blocks/carried/glass_cyan",
+                "textures/blocks/carried/glass_purple",
+                "textures/blocks/carried/glass_blue",
+                "textures/blocks/carried/glass_brown",
+                "textures/blocks/carried/glass_green",
+                "textures/blocks/carried/glass_red",
+                "textures/blocks/carried/glass_black"
+            ]
+        },
+
         "infested_stone": {
             "textures": [
                 "textures/blocks/infested_stone"
